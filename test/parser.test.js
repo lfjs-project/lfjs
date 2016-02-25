@@ -119,23 +119,24 @@ world"`), [{
 
     it('special characters', function() {
       let chars = {
-        '!': 'BANG',
-        '%': 'PERCENT',
-        '*': 'STAR',
-        '+': 'PLUS',
-        '/': 'SLASH',
-        '<': 'LT',
-        '=': 'EQ',
-        '>': 'GT',
-        '?': 'QMARK'
+        '!': '_BANG_',
+        '%': '_PERCENT_',
+        '*': '_STAR_',
+        '+': '_PLUS_',
+        '/': '_SLASH_',
+        '<': '_LT_',
+        '=': '_EQ_',
+        '>': '_GT_',
+        '?': '_QMARK_',
+        '-': '_'
       }
 
-      for (let key in chars) {
+      Object.keys(chars).forEach(key => {
         assert.deepEqual(parse(key), [{
           type: 'identifier',
-          value: `_${chars[key]}_`
+          value: chars[key]
         }]);
-      }
+      });
     });
   });
 
