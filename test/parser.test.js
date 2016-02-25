@@ -50,11 +50,27 @@ world"`), [{
         }]);
       });
 
+      it('negatif integer', function() {
+        assert.deepEqual(parse('-1'), [{
+          type: 'integer',
+          raw: '-1',
+          value: -1
+        }]);
+      });
+
       it('float', function() {
         assert.deepEqual(parse('1.1'), [{
           type: 'float',
           raw: '1.1',
           value: 1.1
+        }]);
+      });
+
+      it('negatif float', function() {
+        assert.deepEqual(parse('-1.1'), [{
+          type: 'float',
+          raw: '-1.1',
+          value: -1.1
         }]);
       });
     });
