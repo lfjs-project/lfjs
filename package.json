@@ -1,7 +1,7 @@
 {
-  "name": "lfj-parser",
-  "version": "0.1.0",
-  "description": "LFJ Parser",
+  "name": "lfjs-parser",
+  "version": "0.2.0",
+  "description": "LFJS Parser",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
@@ -17,19 +17,19 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tchak/lfj-parser.git"
+    "url": "git+https://github.com/tchak/lfjs-parser.git"
   },
   "keywords": [
     "es6",
     "modules"
   ],
   "bugs": {
-    "url": "https://github.com/tchak/lfj-parser/issues"
+    "url": "https://github.com/tchak/lfjs-parser/issues"
   },
   "files": [
     "lib"
   ],
-  "homepage": "https://github.com/tchak/lfj-parser#readme",
+  "homepage": "https://github.com/tchak/lfjs-parser#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.5.1",

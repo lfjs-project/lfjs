@@ -1,4 +1,4 @@
-# LFJ Parser
+# LFJS Parser
 
 A parser for Lisp Flavoured JavaScript
 
