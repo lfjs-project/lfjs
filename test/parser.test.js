@@ -218,13 +218,15 @@ world"`), [{
     });
 
     it('with uniq literals', function() {
-      assert.deepEqual(parse('#{1 "yolo" true 1 2 1}'), [{
+      assert.deepEqual(parse('#{1 "yolo" true 1 2 1 false nil}'), [{
         type: 'set',
         value: [
           { type: 'integer', raw: '1', value: 1 },
           { type: 'string', raw: '"yolo"', value: 'yolo' },
           { type: 'literal', raw: 'true', value: true },
-          { type: 'integer', raw: '2', value: 2 }
+          { type: 'integer', raw: '2', value: 2 },
+          { type: 'literal', raw: 'false', value: false },
+          { type: 'literal', raw: 'null', value: null }
         ]
       }]);
     });
