@@ -120,7 +120,6 @@ world"`), [{
     it('special characters', function() {
       let chars = {
         '!': '_BANG_',
-        '%': '_PERCENT_',
         '*': '_STAR_',
         '+': '_PLUS_',
         '/': '_SLASH_',
@@ -137,6 +136,11 @@ world"`), [{
           value: chars[key]
         }]);
       });
+
+      assert.throws(() => parse('%'),
+        'Invalid character "%" in not an anonymous function.');
+      assert.throws(() => parse('%1'),
+        'Invalid character "%1" in not an anonymous function.');
     });
   });
 
@@ -255,15 +259,92 @@ world"`), [{
         value: [
           { type: 'identifier', value: 'fn' },
           { type: 'vector', value: [
-            { type: 'identifier', value: '_PERCENT_' }
+            { type: 'identifier', value: '_PERCENT_1' }
           ]},
           { type: 'list', value: [
             { type: 'identifier', value: '_PLUS_' },
-            { type: 'identifier', value: '_PERCENT_' },
+            { type: 'identifier', value: '_PERCENT_1' },
             { type: 'integer', raw: '2', value: 2 }
           ]}
         ]
       }]);
+    });
+
+    it('two arguments', function() {
+      assert.deepEqual(parse('#(+ % %2)'), [{
+        type: 'list',
+        value: [
+          { type: 'identifier', value: 'fn' },
+          { type: 'vector', value: [
+            { type: 'identifier', value: '_PERCENT_1' },
+            { type: 'identifier', value: '_PERCENT_2' }
+          ]},
+          { type: 'list', value: [
+            { type: 'identifier', value: '_PLUS_' },
+            { type: 'identifier', value: '_PERCENT_1' },
+            { type: 'identifier', value: '_PERCENT_2' }
+          ]}
+        ]
+      }]);
+    });
+
+    it('three arguments', function() {
+      assert.deepEqual(parse('#(+ % (* %2 %3))'), [{
+        type: 'list',
+        value: [
+          { type: 'identifier', value: 'fn' },
+          { type: 'vector', value: [
+            { type: 'identifier', value: '_PERCENT_1' },
+            { type: 'identifier', value: '_PERCENT_2' },
+            { type: 'identifier', value: '_PERCENT_3' }
+          ]},
+          { type: 'list', value: [
+            { type: 'identifier', value: '_PLUS_' },
+            { type: 'identifier', value: '_PERCENT_1' },
+            { type: 'list', value: [
+              { type: 'identifier', value: '_STAR_' },
+              { type: 'identifier', value: '_PERCENT_2' },
+              { type: 'identifier', value: '_PERCENT_3' }
+            ]}
+          ]}
+        ]
+      }]);
+    });
+
+    it('three nested arguments', function() {
+      assert.deepEqual(parse('#(+ % (#(+ %2 %3) 3 4 5))'), [{
+        type: 'list',
+        value: [
+          { type: 'identifier', value: 'fn' },
+          { type: 'vector', value: [
+            { type: 'identifier', value: '_PERCENT_1' }
+          ]},
+          { type: 'list', value: [
+            { type: 'identifier', value: '_PLUS_' },
+            { type: 'identifier', value: '_PERCENT_1' },
+            { type: 'list', value: [
+              { type: 'list', value: [
+                { type: 'identifier', value: 'fn' },
+                { type: 'vector', value: [
+                  { type: 'identifier', value: '_PERCENT_1' },
+                  { type: 'identifier', value: '_PERCENT_2' },
+                  { type: 'identifier', value: '_PERCENT_3' }
+                ]},
+                {
+                  type: 'list', value: [
+                    { type: 'identifier', value: '_PLUS_' },
+                    { type: 'identifier', value: '_PERCENT_2' },
+                    { type: 'identifier', value: '_PERCENT_3' }
+                  ]
+                }
+              ]},
+              { type: 'integer', raw: "3", value: 3 },
+              { type: 'integer', raw: "4", value: 4 },
+              { type: 'integer', raw: "5", value: 5 }
+            ]}
+          ]}
+        ]}
+      ]);
     });
   });
 
