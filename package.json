@@ -51,6 +51,7 @@
     ]
   },
   "dependencies": {
+    "core-js": "^2.1.1",
     "lodash": "^4.5.1"
   }
 }
