@@ -1,4 +1,5 @@
 # LFJS Parser
+[![Build Status](https://travis-ci.org/tchak/lfjs-parser.svg)](https://travis-ci.org/tchak/lfjs-parser)
 
 A parser for Lisp Flavoured JavaScript
 
