@@ -1,0 +1,1 @@
+const a = ["a", "a", 1, true, null];

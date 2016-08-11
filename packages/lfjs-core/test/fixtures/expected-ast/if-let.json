@@ -1,0 +1,218 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "even_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "even_QMARK_"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "seq"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "seq"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs/core"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "add"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "add"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "filter"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "filter"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "reduce"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "reduce"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "sum_even_numbers"
+          },
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "numbers"
+              }
+            ],
+            "body": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "kind": "let",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "nums"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "Identifier",
+                              "name": "seq"
+                            },
+                            "arguments": [
+                              {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "Identifier",
+                                  "name": "filter"
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "Identifier",
+                                    "name": "even_QMARK_"
+                                  },
+                                  {
+                                    "type": "Identifier",
+                                    "name": "numbers"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "ConditionalExpression",
+                        "test": {
+                          "type": "Identifier",
+                          "name": "nums"
+                        },
+                        "consequent": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "reduce"
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "add"
+                            },
+                            {
+                              "type": "Identifier",
+                              "name": "nums"
+                            }
+                          ]
+                        },
+                        "alternate": {
+                          "type": "StringLiteral",
+                          "value": "No even numbers found."
+                        }
+                      }
+                    }
+                  ],
+                  "directives": []
+                },
+                "generator": false,
+                "async": false
+              },
+              "arguments": []
+            },
+            "async": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "sum_even_numbers"
+        },
+        "arguments": [
+          {
+            "type": "ArrayExpression",
+            "elements": [
+              {
+                "type": "NumericLiteral",
+                "value": 7
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 5
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 9
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

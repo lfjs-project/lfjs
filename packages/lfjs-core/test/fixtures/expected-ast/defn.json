@@ -1,0 +1,86 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "map"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "map"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "inc"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "inc"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs/core"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "a"
+          },
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "x"
+              }
+            ],
+            "body": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "map"
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "inc"
+                },
+                {
+                  "type": "Identifier",
+                  "name": "x"
+                }
+              ]
+            },
+            "async": false
+          }
+        }
+      ]
+    }
+  ],
+  "directives": []
+}

@@ -1,0 +1,69 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "do_stuff"
+          },
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "params": [],
+            "body": {
+              "type": "NullLiteral"
+            },
+            "async": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "do_stuff"
+                  },
+                  "arguments": []
+                }
+              },
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "do_stuff"
+                  },
+                  "arguments": []
+                }
+              }
+            ],
+            "directives": []
+          },
+          "generator": false,
+          "async": false
+        },
+        "arguments": []
+      }
+    }
+  ],
+  "directives": []
+}

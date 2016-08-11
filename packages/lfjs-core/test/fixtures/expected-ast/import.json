@@ -1,0 +1,26 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "a"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "a"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "mylib/a"
+      }
+    }
+  ],
+  "directives": []
+}

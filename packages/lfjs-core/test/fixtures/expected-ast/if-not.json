@@ -1,0 +1,57 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "gt"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "gt"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "ConditionalExpression",
+        "test": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "gt"
+          },
+          "arguments": [
+            {
+              "type": "NumericLiteral",
+              "value": 2
+            },
+            {
+              "type": "NumericLiteral",
+              "value": 3
+            }
+          ]
+        },
+        "consequent": {
+          "type": "StringLiteral",
+          "value": "b"
+        },
+        "alternate": {
+          "type": "StringLiteral",
+          "value": "a"
+        }
+      }
+    }
+  ],
+  "directives": []
+}

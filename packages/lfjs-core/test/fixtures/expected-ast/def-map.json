@@ -1,0 +1,38 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "a"
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "ObjectProperty",
+                "key": {
+                  "type": "StringLiteral",
+                  "value": "key"
+                },
+                "value": {
+                  "type": "NumericLiteral",
+                  "value": 1
+                },
+                "computed": false,
+                "shorthand": false,
+                "decorators": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "directives": []
+}

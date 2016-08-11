@@ -24,7 +24,7 @@ coverage
 build/Release
 
 # Babel build output
-dist
+lib
 
 # Dependency directory
 node_modules
@@ -34,6 +34,3 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
-
-cloture
-

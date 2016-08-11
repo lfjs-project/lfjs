@@ -1,0 +1,22 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ThrowStatement",
+      "argument": {
+        "type": "NewExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "Error"
+        },
+        "arguments": [
+          {
+            "type": "StringLiteral",
+            "value": "error!"
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

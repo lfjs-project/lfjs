@@ -1,57 +1,11 @@
 {
-  "name": "lfjs-parser",
-  "version": "0.3.0",
-  "description": "LFJS Parser",
-  "main": "lib/index.js",
-  "jsnext:main": "src/index.js",
-  "scripts": {
-    "clean": "rimraf lib coverage",
-    "lint": "eslint src test",
-    "pretest": "npm run lint",
-    "test": "mocha --compilers js:babel-register --recursive",
-    "test:watch": "npm test -- --watch",
-    "build": "babel src --out-dir lib",
-    "prepublish": "npm run build && npm test"
-  },
-  "author": "Paul Chavard",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tchak/lfjs-parser.git"
-  },
-  "keywords": [
-    "es6",
-    "modules"
-  ],
-  "bugs": {
-    "url": "https://github.com/tchak/lfjs-parser/issues"
-  },
-  "files": [
-    "lib"
-  ],
-  "homepage": "https://github.com/tchak/lfjs-parser#readme",
   "devDependencies": {
+    "lerna": "2.0.0-beta.24",
     "babel": "^6.5.2",
-    "babel-cli": "^6.5.1",
-    "babel-eslint": "^4.1.8",
-    "babel-plugin-lodash": "^2.1.0",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-register": "^6.5.2",
-    "chai": "^3.5.0",
-    "eslint": "^2.2.0",
-    "mocha": "^2.4.5",
-    "rimraf": "^2.5.2"
-  },
-  "babel": {
-    "plugins": [
-      "lodash"
-    ],
-    "presets": [
-      "es2015"
-    ]
-  },
-  "dependencies": {
-    "core-js": "^2.1.1",
-    "lodash": "^4.5.1"
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.13.2",
+    "eslint": "^3.2.2",
+    "chalk": "^1.1.1"
   }
 }

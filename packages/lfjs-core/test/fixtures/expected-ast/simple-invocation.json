@@ -1,0 +1,86 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "add"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "add"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs/core"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "add"
+        },
+        "arguments": [
+          {
+            "type": "NumericLiteral",
+            "value": 1
+          },
+          {
+            "type": "NumericLiteral",
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_"
+        },
+        "arguments": [
+          {
+            "type": "NumericLiteral",
+            "value": 3
+          },
+          {
+            "type": "NumericLiteral",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

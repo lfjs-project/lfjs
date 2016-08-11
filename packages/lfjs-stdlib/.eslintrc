@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {},
+  "rules": {
+    "no-console": 0,
+    "no-fallthrough": 0,
+    "no-constant-condition": 0
+  },
+  "globals": {
+    "Promise": true,
+    "setTimeout": true,
+    "Symbol": true
+  }
+}

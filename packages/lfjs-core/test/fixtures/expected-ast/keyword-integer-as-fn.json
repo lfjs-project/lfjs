@@ -1,0 +1,94 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "get"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "get"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "get"
+        },
+        "arguments": [
+          {
+            "type": "StringLiteral",
+            "value": "a"
+          },
+          {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "ObjectProperty",
+                "key": {
+                  "type": "StringLiteral",
+                  "value": "a"
+                },
+                "value": {
+                  "type": "NumericLiteral",
+                  "value": 1
+                },
+                "computed": false,
+                "shorthand": false,
+                "decorators": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "get"
+        },
+        "arguments": [
+          {
+            "type": "NumericLiteral",
+            "value": 2
+          },
+          {
+            "type": "ArrayExpression",
+            "elements": [
+              {
+                "type": "NumericLiteral",
+                "value": 1
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 2
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

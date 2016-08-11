@@ -1,0 +1,50 @@
+{
+  "name": "lfjs-core",
+  "version": "0.5.0",
+  "description": "LFJS Transpiler",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "clean": "rm -rf dist coverage",
+    "lint": "eslint src test/*.js",
+    "pretest": "npm run lint",
+    "test": "mocha --compilers js:babel-register",
+    "test:watch": "npm test -- --watch",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build && npm test"
+  },
+  "author": "Paul Chavard",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfjs/lfjs.git"
+  },
+  "keywords": [
+    "es6",
+    "modules"
+  ],
+  "bugs": {
+    "url": "https://github.com/lfjs/lfjs/issues"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/lfjs/lfjs/packages/lfjs-core#readme",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "eslint": "^3.2.2",
+    "mocha": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "lfjs-parser": "0.5.0",
+    "babel-plugin-lodash": "^2.1.0",
+    "babel-types": "^6.5.2",
+    "core-js": "^2.1.1",
+    "lodash": "^4.5.1"
+  }
+}

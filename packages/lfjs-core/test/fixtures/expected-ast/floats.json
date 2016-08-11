@@ -1,0 +1,70 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "floor"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "floor"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "groupBy"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "groupBy"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "groupBy"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "floor"
+          },
+          {
+            "type": "ArrayExpression",
+            "elements": [
+              {
+                "type": "NumericLiteral",
+                "value": 6.1
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 4.2
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 6.3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

@@ -1,0 +1,45 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "a"
+          },
+          "init": {
+            "type": "StringLiteral",
+            "value": "a"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "ObjectExpression",
+        "properties": [
+          {
+            "type": "ObjectProperty",
+            "key": {
+              "type": "Identifier",
+              "name": "doc"
+            },
+            "value": {
+              "type": "StringLiteral",
+              "value": "This is an A."
+            },
+            "computed": false,
+            "shorthand": false,
+            "decorators": null
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

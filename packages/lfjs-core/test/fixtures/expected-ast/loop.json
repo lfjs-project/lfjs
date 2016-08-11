@@ -1,0 +1,208 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "lt"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "lt"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "inc"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "inc"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs/core"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "VariableDeclaration",
+                "kind": "let",
+                "declarations": [
+                  {
+                    "type": "VariableDeclarator",
+                    "id": {
+                      "type": "Identifier",
+                      "name": "i"
+                    },
+                    "init": {
+                      "type": "NumericLiteral",
+                      "value": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "FunctionExpression",
+                    "id": {
+                      "type": "Identifier",
+                      "name": "__loop"
+                    },
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "i"
+                      }
+                    ],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ReturnStatement",
+                          "argument": {
+                            "type": "ConditionalExpression",
+                            "test": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "lt"
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "i"
+                                },
+                                {
+                                  "type": "NumericLiteral",
+                                  "value": 5
+                                }
+                              ]
+                            },
+                            "consequent": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "FunctionExpression",
+                                "id": null,
+                                "params": [],
+                                "body": {
+                                  "type": "BlockStatement",
+                                  "body": [
+                                    {
+                                      "type": "ExpressionStatement",
+                                      "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "MemberExpression",
+                                          "object": {
+                                            "type": "Identifier",
+                                            "name": "console"
+                                          },
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "log"
+                                          },
+                                          "computed": false
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "Identifier",
+                                            "name": "i"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "ReturnStatement",
+                                      "argument": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "Identifier",
+                                          "name": "__loop"
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                              "type": "Identifier",
+                                              "name": "inc"
+                                            },
+                                            "arguments": [
+                                              {
+                                                "type": "Identifier",
+                                                "name": "i"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "directives": []
+                                },
+                                "generator": false,
+                                "async": false
+                              },
+                              "arguments": []
+                            },
+                            "alternate": {
+                              "type": "NullLiteral"
+                            }
+                          }
+                        }
+                      ],
+                      "directives": []
+                    },
+                    "generator": false,
+                    "async": false
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "name": "i"
+                    }
+                  ]
+                }
+              }
+            ],
+            "directives": []
+          },
+          "generator": false,
+          "async": false
+        },
+        "arguments": []
+      }
+    }
+  ],
+  "directives": []
+}

@@ -1,0 +1,43 @@
+{
+  "body": [
+    {
+      "declarations": [
+        {
+          "id": {
+            "name": "a",
+            "type": "Identifier"
+          },
+          "init": {
+            "elements": [
+              {
+                "type": "StringLiteral",
+                "value": "a"
+              },
+              {
+                "type": "StringLiteral",
+                "value": "a"
+              },
+              {
+                "type": "NumericLiteral",
+                "value": 1
+              },
+              {
+                "type": "BooleanLiteral",
+                "value": true
+              },
+              {
+                "type": "NullLiteral"
+              }
+            ],
+            "type": "ArrayExpression"
+          },
+          "type": "VariableDeclarator"
+        }
+      ],
+      "kind": "const",
+      "type": "VariableDeclaration"
+    }
+  ],
+  "directives": [],
+  "type": "Program"
+}

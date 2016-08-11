@@ -1,0 +1,5 @@
+(defn sum-even-numbers [numbers]
+  (if-let [nums (seq (filter even? numbers))]
+    (reduce + nums)
+    "No even numbers found."))
+(sum-even-numbers [7 5 9])

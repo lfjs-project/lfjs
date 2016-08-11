@@ -1,0 +1,198 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "atom"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "atom"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "dec"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "dec"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "deref"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "deref"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "pos_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "pos_QMARK_"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "swap_BANG_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "swap_BANG_"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs/core"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "a"
+          },
+          "init": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "atom"
+            },
+            "arguments": [
+              {
+                "type": "NumericLiteral",
+                "value": 10
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "FunctionExpression",
+          "id": {
+            "type": "Identifier",
+            "name": "__loop"
+          },
+          "params": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "ConditionalExpression",
+                  "test": {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "Identifier",
+                      "name": "pos_QMARK_"
+                    },
+                    "arguments": [
+                      {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "deref"
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "a"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "consequent": {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "FunctionExpression",
+                      "id": null,
+                      "params": [],
+                      "body": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "swap_BANG_"
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "a"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "name": "dec"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "argument": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "__loop"
+                              },
+                              "arguments": []
+                            }
+                          }
+                        ],
+                        "directives": []
+                      },
+                      "generator": false,
+                      "async": false
+                    },
+                    "arguments": []
+                  },
+                  "alternate": {
+                    "type": "NullLiteral"
+                  }
+                }
+              }
+            ],
+            "directives": []
+          },
+          "generator": false,
+          "async": false
+        },
+        "arguments": []
+      }
+    }
+  ],
+  "directives": []
+}
