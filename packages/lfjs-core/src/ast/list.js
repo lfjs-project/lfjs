@@ -1,5 +1,3 @@
-import Set from 'core-js/library/fn/set';
-
 import {
   chunk,
   head,

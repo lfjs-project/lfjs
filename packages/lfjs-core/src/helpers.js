@@ -1,4 +1,3 @@
-import Set from 'core-js/library/fn/set';
 import { compact, find, matches } from 'lodash';
 
 import {

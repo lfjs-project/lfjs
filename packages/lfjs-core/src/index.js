@@ -1,5 +1,4 @@
 import fs from 'fs';
-import Set from 'core-js/library/fn/set';
 import { transformFromAst as babelTransformFromAst } from "babel-core";
 import generate from 'babel-generator';
 import parse from 'lfjs-parser';

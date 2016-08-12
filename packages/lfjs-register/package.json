@@ -15,23 +15,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tchak/lfjs-register.git"
+    "url": "git+https://github.com/lfjs/lfjs.git"
   },
   "keywords": [
     "es6",
     "modules"
   ],
   "bugs": {
-    "url": "https://github.com/tchak/lfjs-register/issues"
+    "url": "https://github.com/lfjs/lfjs/issues"
   },
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/tchak/lfjs-register#readme",
+  "homepage": "https://github.com/lfjs/lfjs/packages/lfjs-register#readme",
   "dependencies": {
-    "babel-core": "^6.7.2",
-    "babel-runtime": "^5.0.0",
-    "core-js": "^2.1.0",
     "home-or-tmp": "^1.0.0",
     "lfjs-core": "0.5.0",
     "mkdirp": "^0.5.1",

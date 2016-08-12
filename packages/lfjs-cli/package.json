@@ -19,29 +19,29 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tchak/lfjs.git"
+    "url": "git+https://github.com/lfjs/lfjs.git"
   },
   "keywords": [
     "es6",
     "modules"
   ],
   "bugs": {
-    "url": "https://github.com/tchak/lfjs/issues"
+    "url": "https://github.com/lfjs/lfjs/issues"
   },
   "files": [
-    "lib"
+    "dist"
   ],
-  "homepage": "https://github.com/tchak/lfjs#readme",
+  "homepage": "https://github.com/lfjs/lfjs#readme",
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "eslint": "^3.2.2"
   },
   "dependencies": {
-    "lodash": "^4.5.1",
+    "commander": "^2.8.1",
     "lfjs-core": "^0.5.0",
-    "babel-register": "^6.11.6",
-    "path-is-absolute": "^1.0.0",
-    "commander": "^2.8.1"
+    "lfjs-register": "^0.5.0",
+    "lodash": "^4.5.1",
+    "path-is-absolute": "^1.0.0"
   },
   "babel": {
     "presets": [

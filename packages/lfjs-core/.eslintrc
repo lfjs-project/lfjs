@@ -3,7 +3,8 @@
   "extends": "eslint:recommended",
   "env": {},
   "globals": {
-    "console": true
+    "console": true,
+    "Set": true
   },
   "rules": {
     "no-console": 0,

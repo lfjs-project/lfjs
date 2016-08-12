@@ -17,34 +17,30 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tchak/lfjs-parser.git"
+    "url": "git+https://github.com/lfjs/lfjs.git"
   },
   "keywords": [
     "es6",
     "modules"
   ],
   "bugs": {
-    "url": "https://github.com/tchak/lfjs-parser/issues"
+    "url": "https://github.com/lfjs/lfjs/issues"
   },
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/tchak/lfjs-parser#readme",
+  "homepage": "https://github.com/lfjs/lfjs#readme",
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "eslint": "^3.2.2",
     "mocha": "^3.0.2"
   },
   "babel": {
-    "plugins": [
-      "lodash"
-    ],
     "presets": [
       "es2015"
     ]
   },
   "dependencies": {
-    "core-js": "^2.1.1",
     "lodash": "^4.5.1"
   }
 }
