@@ -10,14 +10,14 @@ import 'lfjs-register';
 import Context from './context';
 import repl from './repl';
 
-let program = new commander.Command("babel-node");
+let program = new commander.Command("lfjs-node");
 
 program.option("-e, --eval [script]", "Evaluate script");
 program.option("-p, --print [code]", "Evaluate script and print result");
 
 let pkg = require("../package.json");
 program.version(pkg.version);
-program.usage("[options] [ -e script | script.js ] [arguments]");
+program.usage("[options] [ -e script | script.lfjs ] [arguments]");
 program.parse(process.argv);
 
 const context = new Context();

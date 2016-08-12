@@ -1,6 +1,12 @@
 {
+  "name": "lfjs",
+  "description": "Lisp Flavoured JavaScript",
+  "homepage": "https://lfjs.io",
+  "author": "Paul Chavard",
+  "license": "MIT",
   "scripts": {
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -11,5 +17,9 @@
     "chalk": "^1.1.1",
     "eslint": "^3.2.2",
     "lerna": "2.0.0-beta.24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfjs/lfjs.git"
   }
 }

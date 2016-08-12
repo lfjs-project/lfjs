@@ -2,10 +2,8 @@
   "parser": "babel-eslint",
   "extends": "eslint:recommended",
   "env": {
-    "mocha": true
-  },
-  "globals": {
-    "console": true
+    "mocha": true,
+    "node": true
   },
   "rules": {
     "no-console": 0,
