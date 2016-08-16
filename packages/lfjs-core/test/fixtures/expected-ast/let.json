@@ -28,28 +28,28 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "inc"
+            "name": "count"
           },
           "imported": {
             "type": "Identifier",
-            "name": "inc"
+            "name": "count"
           }
         },
         {
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "index"
+            "name": "inc"
           },
           "imported": {
             "type": "Identifier",
-            "name": "index"
+            "name": "inc"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs/core"
+        "value": "lfjs-runtime"
       }
     },
     {
@@ -82,7 +82,7 @@
                     "type": "VariableDeclarator",
                     "id": {
                       "type": "Identifier",
-                      "name": "index"
+                      "name": "count"
                     },
                     "init": {
                       "type": "NumericLiteral",
@@ -113,7 +113,7 @@
                       "arguments": [
                         {
                           "type": "Identifier",
-                          "name": "index"
+                          "name": "count"
                         }
                       ]
                     }
@@ -135,9 +135,14 @@
         "type": "CallExpression",
         "callee": {
           "type": "Identifier",
-          "name": "index"
+          "name": "count"
         },
-        "arguments": []
+        "arguments": [
+          {
+            "elements": [],
+            "type": "ArrayExpression"
+          }
+        ]
       }
     }
   ],

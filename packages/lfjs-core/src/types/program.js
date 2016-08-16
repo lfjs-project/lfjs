@@ -9,7 +9,7 @@ import {
   exportDefaultDeclaration
 } from 'babel-types';
 
-import expressionStatement from '../helpers/expression-statement';
+import expressionStatement from './expression-statement';
 import { arrayToAST, expandMacros } from '../helpers';
 
 export default function(body, env) {

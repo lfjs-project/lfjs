@@ -1,5 +1,5 @@
-import { add } from "lodash/fp";
-import { _ } from "lfjs/core";
+import { add, subtract } from "lodash/fp";
+import { pos_QMARK_ } from "lfjs-runtime";
 add(1, 2);
-
-_(3, 0);
+subtract(3, 0);
+pos_QMARK_(3);

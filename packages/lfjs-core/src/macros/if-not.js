@@ -13,5 +13,5 @@ export default function(nodes) {
       head,
       ...reverse(tail)
     ]
-  }
+  };
 }

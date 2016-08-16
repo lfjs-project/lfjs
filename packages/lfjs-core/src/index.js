@@ -1,28 +1,22 @@
-import fs from 'fs';
-import { transformFromAst as babelTransformFromAst } from "babel-core";
+import { readFileSync } from 'fs';
+import { readFile } from 'mz/fs';
+import { transformFromAst as babelTransformFromAst } from 'babel-core';
 import generate from 'babel-generator';
 import parse from 'lfjs-parser';
 
-import program from './ast/program';
+import program from './types/program';
 
-export default function transform(code, options = {}) {
+export function transform(code, options = {}) {
   return transformFromAst(parse(code), options);
 }
 
-export function transformFile(filename, options = {}, callback) {
-  fs.readFile(filename, function(err, code) {
-    if (err) {
-      callback(err, null);
-    } else {
-      options.filename = filename;
-      callback(null, transform(code, options));
-    }
-  });
+export function transformFile(filename, options = {}) {
+  return readFile(filename)
+    .then(code => transform(code, { filename, ...options }));
 }
 
 export function transformFileSync(filename, options = {}) {
-  options.filename = filename;
-  return transform(fs.readFileSync(filename, "utf8"), options);
+  return transform(readFileSync(filename, 'utf8'), { filename, ...options });
 }
 
 export const VERSION = '0.1.0';
@@ -36,12 +30,15 @@ export function transformFromAst(tree, options = {}) {
   let resultWithCode;
 
   if (options.babel) {
-    let filename = options.filename;
+    let { filename } = options;
 
     resultWithCode = babelTransformFromAst(result.ast, null, {
-      filename: filename,
+      filename,
       presets: ['es2015'],
-      plugins: ['lodash']
+      plugins: [
+        'lodash',
+        'transform-object-rest-spread'
+      ]
     });
   } else {
     resultWithCode = generate(result.ast);
@@ -49,6 +46,13 @@ export function transformFromAst(tree, options = {}) {
 
   return Object.assign(result, resultWithCode);
 }
+
+export default {
+  transform,
+  transformFile,
+  transformFileSync,
+  transformFromAst
+};
 
 function createEnv() {
   return {

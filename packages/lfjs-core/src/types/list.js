@@ -16,9 +16,6 @@ import {
   nullLiteral,
   variableDeclaration,
   variableDeclarator,
-  throwStatement,
-  newExpression,
-  isStringLiteral,
   tryStatement,
   catchClause,
   blockStatement,
@@ -27,8 +24,8 @@ import {
   arrowFunctionExpression
 } from 'babel-types';
 
-import functionExpression from '../helpers/function-expression';
-import objectExpression from '../helpers/object-expression';
+import functionExpression from './function-expression';
+import objectExpression from './object-expression';
 
 import { importModule, nodeToAST, arrayToAST } from '../helpers';
 
@@ -62,10 +59,8 @@ export default function(nodes, env) {
     return doc(head(args).value, env);
   case 'meta':
     return meta(head(args).value, env);
-  case 'throw':
-    return throwStatement(error(head(args)));
   case 'try':
-    return rescue(args, env);
+    return _try(args, env);
   case 'catch':
     return catchClause(identifier('e'),
       blockStatement([
@@ -79,27 +74,23 @@ export default function(nodes, env) {
   }
 }
 
-function rescue(args, env) {
+function _try(args, env) {
   args = arrayToAST(args, env);
 
   if (!isThrowStatement(args[0])) {
     args[0] = returnStatement(args[0]);
   }
 
-  return iife([tryStatement(
-    blockStatement([args[0]]),
-    args[1]
-  )], env);
-}
-
-function error(node) {
-  let message = nodeToAST(node);
-
-  if (isStringLiteral(message)) {
-    return newExpression(identifier('Error'), [message]);
+  if (!args[1]) {
+    args[1] = catchClause(identifier('e'),
+      blockStatement([]));
   }
 
-  return message;
+  return iife([tryStatement(
+    blockStatement([args[0]]),
+    args[1], // catch
+    args[2]  // finally
+  )], env);
 }
 
 function doc(id, env) {

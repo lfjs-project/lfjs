@@ -9,11 +9,11 @@ import {
   stringLiteral
 } from 'babel-types';
 
-import identifier from './ast/identifier';
-import list from './ast/list';
-import map from './ast/map';
-import set from './ast/set';
-import vector from './ast/vector';
+import identifier from './types/identifier';
+import list from './types/list';
+import map from './types/map';
+import set from './types/set';
+import vector from './types/vector';
 
 import _when from './macros/when';
 import _while from './macros/while';

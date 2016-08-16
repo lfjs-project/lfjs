@@ -1,4 +1,4 @@
-import { even_QMARK_, seq } from "lfjs/core";
+import { even_QMARK_, seq } from "lfjs-runtime";
 import { add, filter, reduce } from "lodash/fp";
 
 const sum_even_numbers = numbers => function () {

@@ -1,7 +1,7 @@
 {
-  "name": "lfjs-stdlib",
+  "name": "lfjs-runtime",
   "version": "0.5.1",
-  "description": "LFJS stdlib",
+  "description": "LFJS runtime",
   "homepage": "https://lfjs.io",
   "author": "Paul Chavard",
   "license": "MIT",
@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
-    "babel-plugin-lodash": "^2.1.0",
     "eslint": "^3.2.2",
     "mocha": "^3.0.2"
   },
@@ -42,6 +41,7 @@
     ]
   },
   "dependencies": {
+    "any-promise": "^1.3.0",
     "lodash": "^4.5.1"
   }
 }

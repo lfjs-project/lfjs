@@ -62,7 +62,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs/core"
+        "value": "lfjs-runtime"
       }
     },
     {

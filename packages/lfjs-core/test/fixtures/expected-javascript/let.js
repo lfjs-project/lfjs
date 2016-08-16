@@ -1,10 +1,10 @@
 import { add } from "lodash/fp";
-import { inc, index } from "lfjs/core";
+import { count, inc } from "lfjs-runtime";
 
 (function () {
   let i = 0,
-      index = 0;
-  return add(i, inc(index));
+      count = 0;
+  return add(i, inc(count));
 })();
 
-index();
+count([]);

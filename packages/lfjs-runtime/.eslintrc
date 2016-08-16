@@ -8,8 +8,9 @@
     "no-constant-condition": 0
   },
   "globals": {
-    "Promise": true,
+    "console": true,
     "setTimeout": true,
-    "Symbol": true
+    "Symbol": true,
+    "Set": true
   }
 }

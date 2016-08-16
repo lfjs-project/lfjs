@@ -6,12 +6,19 @@
   "license": "MIT",
   "scripts": {
     "clean": "lerna clean",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "test:cli": "lerna run test --scope lfjs-cli",
+    "test:parser": "lerna run test --scope lfjs-parser",
+    "test:core": "lerna run test --scope lfjs-core",
+    "test:runtime": "lerna run test --scope lfjs-runtime",
+    "build": "lerna run build"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
     "babel-cli": "^6.11.4",
     "babel-eslint": "^6.1.2",
+    "babel-plugin-lodash": "^3.2.6",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.13.2",
     "chai": "^3.5.0",
     "chalk": "^1.1.1",

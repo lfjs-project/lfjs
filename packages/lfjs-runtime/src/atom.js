@@ -1,12 +1,11 @@
 import { isUndefined } from 'lodash';
 
-const atom        = (v)     => new Atom(v);
-const reset_BANG_ = (a, v)  => a.reset(v);
-const swap_BANG_  = (a, fn) => a.swap(fn);
-const deref       = (a)     => a.deref();
+const atom        = (value)     => new Atom(value);
+const reset_BANG_ = (atom, value)  => atom.reset(value);
+const swap_BANG_  = (atom, fn) => atom.swap(fn);
+const deref       = (atom)     => atom.value;
 
 export { atom, reset_BANG_, swap_BANG_, deref };
-export default atom;
 
 function defaultValidate() { return true; }
 
@@ -16,25 +15,21 @@ class Atom {
     this.reset(value);
   }
 
-  deref() {
-    return this.value;
-  }
-
   reset(value) {
     if (this.validate(value)) {
       this.value = isUndefined(value) ? null : value;
     } else {
-      throw(new Error(`Invalid value ${value}`));
+      throw new Error(`Invalid value ${value}`);
     }
-    return this.value;
+    return deref(this);
   }
 
   swap(fn, ...args) {
-    let value = fn(this.value, ...args);
+    let value = fn(deref(value), ...args);
     return this.reset(value);
   }
 
   toString() {
-    return this.deref().toString();
+    return deref(this).toString();
   }
 }

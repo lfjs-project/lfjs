@@ -8,11 +8,31 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "_throw"
+            "name": "map"
           },
           "imported": {
             "type": "Identifier",
-            "name": "_throw"
+            "name": "map"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "inc"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "inc"
           }
         }
       ],
@@ -20,37 +40,6 @@
         "type": "StringLiteral",
         "value": "lfjs-runtime"
       }
-    },
-    {
-      "type": "VariableDeclaration",
-      "kind": "const",
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "id": {
-            "type": "Identifier",
-            "name": "error_BANG_"
-          },
-          "init": {
-            "type": "ArrowFunctionExpression",
-            "params": [],
-            "body": {
-              "type": "CallExpression",
-              "callee": {
-                "type": "Identifier",
-                "name": "_throw"
-              },
-              "arguments": [
-                {
-                  "type": "StringLiteral",
-                  "value": "Error!"
-                }
-              ]
-            },
-            "async": false
-          }
-        }
-      ]
     },
     {
       "type": "ExpressionStatement",
@@ -74,9 +63,27 @@
                         "type": "CallExpression",
                         "callee": {
                           "type": "Identifier",
-                          "name": "error_BANG_"
+                          "name": "map"
                         },
-                        "arguments": []
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "inc"
+                          },
+                          {
+                            "type": "ArrayExpression",
+                            "elements": [
+                              {
+                                "type": "NumericLiteral",
+                                "value": 1
+                              },
+                              {
+                                "type": "NumericLiteral",
+                                "value": 2
+                              }
+                            ]
+                          }
+                        ]
                       }
                     }
                   ],
@@ -90,15 +97,7 @@
                   },
                   "body": {
                     "type": "BlockStatement",
-                    "body": [
-                      {
-                        "type": "ReturnStatement",
-                        "argument": {
-                          "type": "StringLiteral",
-                          "value": "yolo!"
-                        }
-                      }
-                    ],
+                    "body": [],
                     "directives": []
                   }
                 },

@@ -1,5 +1,5 @@
 import { lt } from "lodash/fp";
-import { inc } from "lfjs/core";
+import { inc } from "lfjs-runtime";
 
 (function () {
   let i = 0;

@@ -35,11 +35,19 @@
   "babel": {
     "presets": [
       "es2015"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
     ]
   },
   "dependencies": {
-    "lfjs-parser": "^0.5.1",
+    "babel-core": "^6.13.2",
+    "babel-plugin-lodash": "^3.2.6",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-types": "^6.5.2",
-    "lodash": "^4.5.1"
+    "lfjs-parser": "^0.5.1",
+    "lfjs-runtime": "^0.5.1",
+    "lodash": "^4.5.1",
+    "mz": "^2.4.0"
   }
 }

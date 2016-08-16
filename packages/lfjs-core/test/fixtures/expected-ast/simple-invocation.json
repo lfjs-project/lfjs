@@ -14,6 +14,17 @@
             "type": "Identifier",
             "name": "add"
           }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "subtract"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "subtract"
+          }
         }
       ],
       "source": {
@@ -28,17 +39,17 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "_"
+            "name": "pos_QMARK_"
           },
           "imported": {
             "type": "Identifier",
-            "name": "_"
+            "name": "pos_QMARK_"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs/core"
+        "value": "lfjs-runtime"
       }
     },
     {
@@ -67,7 +78,7 @@
         "type": "CallExpression",
         "callee": {
           "type": "Identifier",
-          "name": "_"
+          "name": "subtract"
         },
         "arguments": [
           {
@@ -77,6 +88,22 @@
           {
             "type": "NumericLiteral",
             "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "pos_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "NumericLiteral",
+            "value": 3
           }
         ]
       }

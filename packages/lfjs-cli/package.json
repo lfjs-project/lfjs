@@ -1,7 +1,7 @@
 {
   "name": "lfjs-cli",
   "version": "0.5.1",
-  "description": "LFJS cli",
+  "description": "LFJS command line",
   "homepage": "https://lfjs.io",
   "author": "Paul Chavard",
   "license": "MIT",

@@ -1,10 +1,28 @@
-# LFJS Transpiler
-[![Build Status](https://travis-ci.org/tchak/lfjs-transpiler.svg)](https://travis-ci.org/tchak/lfjs-transpiler)
+# lfjs-core
 
-A transpiler for Lisp Flavoured JavaScript
+> LFJS compiler core
+
+## Install
+
+```
+$ npm install lfjs-core
+```
+
+## Usage
+
+```js
+import lfjs from 'lfjs-core';
+
+const code = `(+ 1 2)`;
+const result = lfjs.transform(code, { /* options */ });
+
+result.code; // Generated code
+result.map; // Sourcemap
+result.ast; // AST
+```
 
 ```javascript
-transpile([{
+lfjs.transformFromAst([{
   "type": "list",
   "value": [
     { "type": "identifier", "value": "_PLUS_" },
@@ -61,6 +79,4 @@ transpile([{
 }
 ```
 
-# License
-
-Published by [tchak](https://github.com/tchak) under a permissive MIT License, see [LICENSE.md](./LICENSE.md).
+For more in depth documentation see: http://lfjs.io/docs/usage/api/

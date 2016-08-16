@@ -2,6 +2,26 @@
   "type": "Program",
   "body": [
     {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_throw"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_throw"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime"
+      }
+    },
+    {
       "type": "ExpressionStatement",
       "expression": {
         "type": "CallExpression",
@@ -18,17 +38,17 @@
                   "type": "BlockStatement",
                   "body": [
                     {
-                      "type": "ThrowStatement",
+                      "type": "ReturnStatement",
                       "argument": {
-                        "type": "NewExpression",
+                        "type": "CallExpression",
                         "callee": {
                           "type": "Identifier",
-                          "name": "Error"
+                          "name": "_throw"
                         },
                         "arguments": [
                           {
                             "type": "StringLiteral",
-                            "value": "error!"
+                            "value": "Error!"
                           }
                         ]
                       }

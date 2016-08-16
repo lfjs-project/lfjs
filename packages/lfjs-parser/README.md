@@ -1,7 +1,14 @@
-# LFJS Parser
-[![Build Status](https://travis-ci.org/tchak/lfjs-parser.svg)](https://travis-ci.org/tchak/lfjs-parser)
+# lfjs-parser
 
-A parser for Lisp Flavoured JavaScript
+> LFJS parser
+
+## Install
+
+```
+$ npm install lfjs-parser
+```
+
+## Usage
 
 ```javascript
 parse('(+ 1 2)');
@@ -15,6 +22,3 @@ parse('(+ 1 2)');
   ]
 }]
 ```
-# License
-
-Published by [tchak](https://github.com/tchak) under a permissive MIT License, see [LICENSE.md](./LICENSE.md).

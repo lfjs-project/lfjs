@@ -1,11 +1,17 @@
-# Lisp Flavoured JavaScript
-[![Build Status](https://travis-ci.org/tchak/lfjs.svg)](https://travis-ci.org/tchak/lfjs)
+# lfjs-cli
 
-```clojure
-(println "hello world")
-(+ 1 2)
+> LFJS command line
+
+## Install
+
+```sh
+$ npm install lfjs-cli
 ```
 
-# License
+## Usage
 
-Published by [tchak](https://github.com/tchak) under a permissive MIT License, see [LICENSE.md](./LICENSE.md).
+```sh
+$ lfjs script.lfjs
+```
+
+For more in depth documentation see: http://lfjs.io/docs/usage/cli/

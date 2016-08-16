@@ -9,5 +9,5 @@ export default function(nodes, node) {
       node,
       ...nodes
     ]
-  }
+  };
 }
