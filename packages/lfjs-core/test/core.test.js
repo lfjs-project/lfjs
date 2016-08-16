@@ -17,6 +17,7 @@ describe('lfjs-core', () => {
     test('def map', '(def a {:key 1})');
     test('def with doc', '(def a "This is an A." "a")');
     test('defn', '(defn a [x] (map inc x))');
+    test('defn no body', '(defn a [])');
     test('defn with doc', '(defn a "Increment all the things." [x] (map inc x))');
     test('keyword / integer as fn', '(:a {:a 1}) (2 [1 2 3])');
     test('doc', '(def a "This is an A." "a") (doc a)');
@@ -58,7 +59,26 @@ describe('lfjs-core', () => {
     test('try', '(try (map inc [1 2]))');
     test('throw try catch', '(try (throw "Error!") (catch "yolo!"))');
     test('try catch', '(defn error! [] (throw "Error!")) (try (error!) (catch "yolo!"))');
-  })
+    test('try catch finally', '(try (map inc [1 2]) (catch []) (finally (println "yolo!")))');
+  });
+
+  describe('class', () => {
+    test('class', '(class Model (defmethod save [x] x) (defmethod update []))');
+    //test('class extends', '(class Model :extends Base (defmethod save [x] x) (defmethod update []))');
+  });
+
+  describe('predicates', () => {
+    test('nil?', '(nil? nil)');
+    test('array?', '(array? [])');
+    test('true?', '(true? true)');
+    test('false?', '(false? false)');
+    test('number?', '(number? 1)');
+    test('string?', '(string? "abc")');
+    test('is empty?', '(empty? [])');
+    test('fn?', '(fn? inc)');
+    test('integer?', '(integer? 1)');
+    test('float?', '(float? 1.1)');
+  });
 });
 
 function test(name, source) {

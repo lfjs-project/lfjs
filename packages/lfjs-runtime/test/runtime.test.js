@@ -140,8 +140,13 @@ describe('lfjs-runtime', function() {
 
     it('#conj', function() {
       let a = [1];
-      assert.deepEqual(r.conj(a, 2), [1, 2]);
-      assert.notEqual(r.conj(a, 2), a);
+      assert.deepEqual(r.conj(a, 2, 3), [1, 2, 3]);
+      assert.deepEqual(r.conj(a)(2), [1, 2]);
+      assert.notDeepEqual(r.conj(a, 2), a);
+    });
+
+    it('#cons', function() {
+      assert.deepEqual(r.cons(1, [2, 3]), [1, 2, 3]);
     });
 
     it('#seq', function() {

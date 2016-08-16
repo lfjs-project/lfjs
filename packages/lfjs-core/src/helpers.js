@@ -44,6 +44,7 @@ registerMacro({ type: 'keyword' }, get);
 
 export function nodeToAST(node, env) {
   if (isNode(node)) { return node; }
+  if (!node) { return nullLiteral(); }
 
   let { type, value } = node;
   switch (type) {

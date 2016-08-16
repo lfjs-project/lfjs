@@ -1,0 +1,72 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Model"
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "ClassMethod",
+            "kind": "method",
+            "key": {
+              "type": "Identifier",
+              "name": "save"
+            },
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "x"
+              }
+            ],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "x"
+                  }
+                }
+              ],
+              "directives": []
+            },
+            "computed": false,
+            "static": false
+          },
+          {
+            "type": "ClassMethod",
+            "kind": "method",
+            "key": {
+              "type": "Identifier",
+              "name": "update"
+            },
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "NullLiteral"
+                  }
+                }
+              ],
+              "directives": []
+            },
+            "computed": false,
+            "static": false
+          }
+        ]
+      },
+      "decorators": []
+    }
+  ],
+  "directives": []
+}

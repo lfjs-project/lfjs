@@ -31,3 +31,7 @@ export function inc(a) {
 export function mod(a, b) {
   return (a % b + b) % b;
 }
+
+export function float_QMARK_(n) {
+ return n === +n && n !== (n|0);
+}

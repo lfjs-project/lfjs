@@ -6,7 +6,8 @@ export {
   neg_QMARK_,
   zero_QMARK_,
   even_QMARK_,
-  odd_QMARK_
+  odd_QMARK_,
+  float_QMARK_
 } from './math';
 
 export {
@@ -19,7 +20,8 @@ export {
 
 export {
   conj,
-  unshift,
+  cons,
+  concat,
   seq,
   count
 } from './array';

@@ -2,14 +2,16 @@ import { initial, last } from 'lodash';
 
 import {
   expressionStatement,
-  isVariableDeclaration,
+  isClassDeclaration,
   isThrowStatement,
-  returnStatement,
-  isTryStatement
+  isTryStatement,
+  isVariableDeclaration,
+  returnStatement
 } from 'babel-types';
 
 function needsWrappedStatement(body) {
   return isVariableDeclaration(body) ||
+    isClassDeclaration(body) ||
     isThrowStatement(body) ||
     isTryStatement(body);
 }

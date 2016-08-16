@@ -9,23 +9,27 @@ import {
 } from 'lodash';
 
 import {
+  arrowFunctionExpression,
+  blockStatement,
   callExpression,
+  catchClause,
+  classBody,
+  classDeclaration,
   conditionalExpression,
   identifier,
-  stringLiteral,
+  isThrowStatement,
   nullLiteral,
+  returnStatement,
+  stringLiteral,
+  tryStatement,
   variableDeclaration,
   variableDeclarator,
-  tryStatement,
-  catchClause,
-  blockStatement,
-  returnStatement,
-  isThrowStatement,
-  arrowFunctionExpression
+  classMethod
 } from 'babel-types';
 
 import functionExpression from './function-expression';
 import objectExpression from './object-expression';
+import expressionStatement from './expression-statement';
 
 import { importModule, nodeToAST, arrayToAST } from '../helpers';
 
@@ -62,16 +66,29 @@ export default function(nodes, env) {
   case 'try':
     return _try(args, env);
   case 'catch':
-    return catchClause(identifier('e'),
-      blockStatement([
-        returnStatement(nodeToAST(head(args), env))
-      ])
-    );
+    return _catch(head(args), env);
+  case 'finally':
+    return _finally(head(args), env);
+  case 'class':
+    return _class(head(args), tail(args), env);
+  case 'defmethod':
+    return method(head(args), tail(args), env);
   default:
     return callExpression(
       nodeToAST(id, env), arrayToAST(args, env)
     );
   }
+}
+
+function _class(id, body, env) {
+  env.scope.add(id.value);
+
+  return classDeclaration(
+    nodeToAST(id, env),
+    null,
+    classBody(arrayToAST(body, env)),
+    []
+  );
 }
 
 function _try(args, env) {
@@ -91,6 +108,20 @@ function _try(args, env) {
     args[1], // catch
     args[2]  // finally
   )], env);
+}
+
+function _catch(body, env) {
+  return catchClause(identifier('e'),
+    blockStatement([
+      returnStatement(nodeToAST(body, env))
+    ])
+  );
+}
+
+function _finally(body, env) {
+  return blockStatement([
+    returnStatement(nodeToAST(body, env))
+  ]);
 }
 
 function doc(id, env) {
@@ -114,6 +145,23 @@ function meta(id, env) {
   }
 }
 
+function method(key, args, env) {
+  let [{ value: params }, body] = args;
+
+  env = Object.assign({}, env, { params: new Set() });
+
+  return classMethod(
+    'method',
+    identifier(key.value),
+    toArgs(params, env),
+    blockStatement(
+      expressionStatement(
+        nodeToAST(body, env), true
+      )
+    ),
+    false, false);
+}
+
 function fn(args, env) {
   let [{ value: params }, body] = args;
 
@@ -121,7 +169,7 @@ function fn(args, env) {
 
   return arrowFunctionExpression(
     toArgs(params, env),
-    body ? nodeToAST(body, env) : nullLiteral()
+    nodeToAST(body, env)
   );
 }
 

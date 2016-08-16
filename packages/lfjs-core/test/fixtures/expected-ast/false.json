@@ -1,0 +1,22 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "false_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "BooleanLiteral",
+            "value": false
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

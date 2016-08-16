@@ -1,13 +1,11 @@
-export function _try(try_expression, catch_expression) {
+export function _try(body, catch_expression) {
   if (catch_expression && !catch_expression._isCatchExpression) {
     _throw('Catch expression of wrong type.');
   }
   try {
-    return try_expression();
+    return body();
   } catch (e) {
-    if (catch_expression) {
-      catch_expression(e);
-    }
+    return catch_expression ? catch_expression(e) : null;
   }
 }
 

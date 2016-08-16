@@ -1,0 +1,41 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "isNil"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isNil"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lodash/fp"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "isNil"
+        },
+        "arguments": [
+          {
+            "type": "NullLiteral"
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

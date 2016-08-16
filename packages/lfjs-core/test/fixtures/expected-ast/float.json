@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "float_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "float_QMARK_"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "float_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "NumericLiteral",
+            "value": 1.1
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}
