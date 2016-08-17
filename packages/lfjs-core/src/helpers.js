@@ -17,6 +17,7 @@ import vector from './types/vector';
 
 import _when from './macros/when';
 import _while from './macros/while';
+import defc from './macros/defc';
 import defn from './macros/defn';
 import get from './macros/get';
 import ifLet from './macros/if-let';
@@ -33,6 +34,7 @@ export function registerMacro(pattern, fn) {
 }
 
 registerMacro({ value: 'defn' }, defn);
+registerMacro({ value: 'defc' }, defc);
 registerMacro({ value: 'if_let' }, ifLet);
 registerMacro({ value: 'if_not' }, ifNot);
 registerMacro({ value: 'println' }, println);

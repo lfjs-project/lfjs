@@ -1,0 +1,100 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "component"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "component"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-html"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "text_input"
+          },
+          "init": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "component"
+            },
+            "arguments": [
+              {
+                "type": "ArrowFunctionExpression",
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "value"
+                  }
+                ],
+                "body": {
+                  "type": "ArrayExpression",
+                  "elements": [
+                    {
+                      "type": "StringLiteral",
+                      "value": "input"
+                    },
+                    {
+                      "type": "ObjectExpression",
+                      "properties": [
+                        {
+                          "type": "ObjectProperty",
+                          "key": {
+                            "type": "StringLiteral",
+                            "value": "type"
+                          },
+                          "value": {
+                            "type": "StringLiteral",
+                            "value": "text"
+                          },
+                          "computed": false,
+                          "shorthand": false,
+                          "decorators": null
+                        },
+                        {
+                          "type": "ObjectProperty",
+                          "key": {
+                            "type": "StringLiteral",
+                            "value": "value"
+                          },
+                          "value": {
+                            "type": "Identifier",
+                            "name": "value"
+                          },
+                          "computed": false,
+                          "shorthand": false,
+                          "decorators": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "async": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "directives": []
+}

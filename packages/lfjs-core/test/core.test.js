@@ -22,6 +22,7 @@ describe('lfjs-core', () => {
     test('keyword / integer as fn', '(:a {:a 1}) (2 [1 2 3])');
     test('doc', '(def a "This is an A." "a") (doc a)');
     test('meta', '(def a "This is an A." "a") (meta a)');
+    test('defc', '(defc text-input [value] [:input { :type :text :value value }])');
   });
 
   describe('invocations', () => {

@@ -14,7 +14,6 @@ const LODASH_MAPPING = {
   '_EQ_':            'isEqual',
   'contains_QMARK_': 'includes',
   'comp':            'compose',
-  '_GT__GT_':        'pipe',
   '_GT_':            'gt',
   '_LT_':            'lt',
   '_GT__EQ_':        'gte',
@@ -38,6 +37,8 @@ export default function(value, env) {
       return identifier(normalized);
     } else if (isRuntime(id)) {
       importModule(id, 'lfjs-runtime', env);
+    } else if (id === 'component') {
+      importModule(id, 'lfjs-html', env);
     } else {
       console.log(`WARNING: identifier "${id}" not defined`);
     }
