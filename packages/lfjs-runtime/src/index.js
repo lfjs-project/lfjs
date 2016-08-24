@@ -1,44 +1,28 @@
-export {
-  dec,
-  inc,
-  mod,
-  pos_QMARK_,
-  neg_QMARK_,
-  zero_QMARK_,
-  even_QMARK_,
-  odd_QMARK_,
-  float_QMARK_
-} from './math';
+import * as atom from './atom';
+import * as coll from './coll';
+import * as fn from './fn';
+import * as hashMap from './hash-map';
+import * as lang from './lang';
+import * as math from './math';
+import * as set from './set';
+import * as string from './string';
+import * as transducers from './transducers';
+import * as vector from './vector';
 
-export {
-  deferred,
-  deferred_QMARK_,
-  chain,
-  resolve,
-  reject
-} from './deferred';
+import registry from './registry';
 
-export {
-  conj,
-  cons,
-  concat,
-  seq,
-  count
-} from './array';
+export { registry };
 
-export {
+export default Object.assign(
+  Object.create(null),
   atom,
-  reset_BANG_,
-  swap_BANG_,
-  deref
-} from './atom';
-
-export {
-  juxt
-} from './fn';
-
-export {
-  _throw
-} from './exception';
-
-export { str } from './string';
+  coll,
+  fn,
+  hashMap,
+  lang,
+  math,
+  set,
+  string,
+  transducers,
+  vector
+);

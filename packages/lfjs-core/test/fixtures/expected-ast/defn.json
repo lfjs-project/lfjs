@@ -18,7 +18,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime/transducers"
       }
     },
     {
@@ -38,7 +38,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime"
+        "value": "lfjs-runtime/math"
       }
     },
     {

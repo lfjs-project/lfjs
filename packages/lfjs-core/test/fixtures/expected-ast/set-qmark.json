@@ -1,0 +1,51 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "set_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isSet"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/lang"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "set_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "NewExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "Set"
+            },
+            "arguments": [
+              {
+                "type": "ArrayExpression",
+                "elements": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

@@ -12,19 +12,15 @@ import {
   arrowFunctionExpression,
   blockStatement,
   callExpression,
-  catchClause,
   classBody,
   classDeclaration,
+  classMethod,
   conditionalExpression,
   identifier,
-  isThrowStatement,
   nullLiteral,
-  returnStatement,
   stringLiteral,
-  tryStatement,
   variableDeclaration,
-  variableDeclarator,
-  classMethod
+  variableDeclarator
 } from 'babel-types';
 
 import functionExpression from './function-expression';
@@ -54,7 +50,7 @@ export default function(nodes, env) {
   case 'loop':
     return loop(head(args), tail(args), env);
   case 'import':
-    importModule(head(args).value, last(args).value, env);
+    importModule(`${head(args).value}:${head(args).value}`, last(args).value, env);
     return null;
   case 'export':
     env.exportDefault = head(args).value;
@@ -63,12 +59,6 @@ export default function(nodes, env) {
     return doc(head(args).value, env);
   case 'meta':
     return meta(head(args).value, env);
-  case 'try':
-    return _try(args, env);
-  case 'catch':
-    return _catch(head(args), env);
-  case 'finally':
-    return _finally(head(args), env);
   case 'class':
     return _class(head(args), tail(args), env);
   case 'defmethod':
@@ -89,39 +79,6 @@ function _class(id, body, env) {
     classBody(arrayToAST(body, env)),
     []
   );
-}
-
-function _try(args, env) {
-  args = arrayToAST(args, env);
-
-  if (!isThrowStatement(args[0])) {
-    args[0] = returnStatement(args[0]);
-  }
-
-  if (!args[1]) {
-    args[1] = catchClause(identifier('e'),
-      blockStatement([]));
-  }
-
-  return iife([tryStatement(
-    blockStatement([args[0]]),
-    args[1], // catch
-    args[2]  // finally
-  )], env);
-}
-
-function _catch(body, env) {
-  return catchClause(identifier('e'),
-    blockStatement([
-      returnStatement(nodeToAST(body, env))
-    ])
-  );
-}
-
-function _finally(body, env) {
-  return blockStatement([
-    returnStatement(nodeToAST(body, env))
-  ]);
 }
 
 function doc(id, env) {

@@ -8,17 +8,6 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "even_QMARK_"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "even_QMARK_"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
             "name": "seq"
           },
           "imported": {
@@ -29,7 +18,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime"
+        "value": "lfjs-runtime/vector"
       }
     },
     {
@@ -39,17 +28,6 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "add"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "add"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
             "name": "filter"
           },
           "imported": {
@@ -71,7 +49,38 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime/transducers"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_PLUS_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "add"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "even_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isEven"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/math"
       }
     },
     {
@@ -157,7 +166,7 @@
                           "arguments": [
                             {
                               "type": "Identifier",
-                              "name": "add"
+                              "name": "_PLUS_"
                             },
                             {
                               "type": "Identifier",

@@ -8,7 +8,7 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "gt"
+            "name": "_GT_"
           },
           "imported": {
             "type": "Identifier",
@@ -18,7 +18,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime/math"
       }
     },
     {
@@ -29,7 +29,7 @@
           "type": "CallExpression",
           "callee": {
             "type": "Identifier",
-            "name": "gt"
+            "name": "_GT_"
           },
           "arguments": [
             {

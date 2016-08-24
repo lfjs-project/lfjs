@@ -14,7 +14,7 @@
     "test": "mocha --compilers js:babel-register",
     "test:watch": "npm test -- --watch",
     "build": "babel src --out-dir dist",
-    "prepublish": "npm run build && npm test"
+    "prepublish": "npm run clean && npm test && npm run build"
   },
   "repository": {
     "type": "git",

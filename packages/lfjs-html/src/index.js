@@ -1,14 +1,11 @@
 /* global document */
-import Promise from 'any-promise';
+
 import { isPlainObject, isEmpty, isString } from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 
-export const {
-  renderToString: render_html,
-  renderToStaticMarkup: render_static
-} = ReactDOMServer;
+export const isBrowser = (typeof document !== 'undefined');
 
 export default function html(element) {
   return createElement(normalize(element));
@@ -27,12 +24,21 @@ export function component(render) {
   return (...args) => [Component, { args }];
 }
 
+export const {
+  renderToString: renderHtml,
+  renderToStaticMarkup: renderStatic
+} = ReactDOMServer;
+
 export function mount(element, selector) {
   return new Promise(resolve => {
-    let container = isString(selector) ?
-      document.querySelector(selector) :
-        (selector ? selector : document.body);
-    ReactDOM.render(element, container, resolve);
+    if (isBrowser) {
+      let container = (isString(selector)) ?
+        document.querySelector(selector) :
+          (selector ? selector : document.body);
+      ReactDOM.render(element, container, resolve);
+    } else {
+      resolve(renderHtml(element));
+    }
   });
 }
 

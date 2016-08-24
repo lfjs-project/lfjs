@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "hash_map_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isHashMap"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/lang"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "hash_map_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "ObjectExpression",
+            "properties": []
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

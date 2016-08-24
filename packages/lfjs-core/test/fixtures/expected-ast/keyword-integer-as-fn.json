@@ -18,7 +18,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime/hash-map"
       }
     },
     {

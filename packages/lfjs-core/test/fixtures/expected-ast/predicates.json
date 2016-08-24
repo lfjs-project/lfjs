@@ -8,28 +8,37 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "filter"
+            "name": "vector_QMARK_"
           },
           "imported": {
             "type": "Identifier",
-            "name": "filter"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
-            "name": "isArray"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "isArray"
+            "name": "isVector"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime/lang"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "filter"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "filter"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/transducers"
       }
     },
     {
@@ -43,13 +52,13 @@
           },
           "imported": {
             "type": "Identifier",
-            "name": "odd_QMARK_"
+            "name": "isOdd"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime"
+        "value": "lfjs-runtime/math"
       }
     },
     {
@@ -75,7 +84,7 @@
         "type": "CallExpression",
         "callee": {
           "type": "Identifier",
-          "name": "isArray"
+          "name": "vector_QMARK_"
         },
         "arguments": [
           {

@@ -8,31 +8,11 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "add"
+            "name": "_PLUS_"
           },
           "imported": {
             "type": "Identifier",
             "name": "add"
-          }
-        }
-      ],
-      "source": {
-        "type": "StringLiteral",
-        "value": "lodash/fp"
-      }
-    },
-    {
-      "type": "ImportDeclaration",
-      "specifiers": [
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
-            "name": "count"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "count"
           }
         },
         {
@@ -49,7 +29,27 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime"
+        "value": "lfjs-runtime/math"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "count"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "count"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/coll"
       }
     },
     {
@@ -97,7 +97,7 @@
                   "type": "CallExpression",
                   "callee": {
                     "type": "Identifier",
-                    "name": "add"
+                    "name": "_PLUS_"
                   },
                   "arguments": [
                     {
@@ -139,8 +139,8 @@
         },
         "arguments": [
           {
-            "elements": [],
-            "type": "ArrayExpression"
+            "type": "ArrayExpression",
+            "elements": []
           }
         ]
       }

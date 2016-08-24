@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "true_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isTrue"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/lang"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "true_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "BooleanLiteral",
+            "value": true
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

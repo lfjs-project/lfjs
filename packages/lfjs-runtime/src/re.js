@@ -1,8 +1,14 @@
 const ITERATOR_SYMBOL = Symbol.iterator;
 
-const re_pattern = (pattern, flags) => new RegExp(pattern, flags);
-const re_matcher = (pattern, str) => new Matcher(pattern, str);
-const re_matches = (re, str) => {
+export function rePattern(pattern, flags) {
+  return new RegExp(pattern, flags);
+}
+
+export function reMatcher(pattern, str) {
+  return new Matcher(pattern, str);
+}
+
+export function reMatches(re, str) {
   let matches = re.exec(str);
   if (!matches || matches[0] !== str) { return null; }
   if (matches.length === 1) {
@@ -10,8 +16,9 @@ const re_matches = (re, str) => {
   } else {
     return Array.from(matches);
   }
-};
-const re_find = (re, str) => {
+}
+
+export function reFind(re, str) {
   if (re instanceof Matcher) {
     return re.find();
   } else {
@@ -23,18 +30,11 @@ const re_find = (re, str) => {
       return Array.from(matches);
     }
   }
-};
-const re_seq = (re, str) => {
-  return Array.from(new Matcher(re, str));
-};
+}
 
-export {
-  re_pattern,
-  re_matcher,
-  re_matches,
-  re_find,
-  re_seq
-};
+export function reSeq(re, str) {
+  return Array.from(new Matcher(re, str));
+}
 
 class Iterator {
   constructor(next) {
@@ -60,12 +60,21 @@ class Matcher {
       }
     }
 
-    let iterator = new Iterator(next);
-    this[ITERATOR_SYMBOL] = () => iterator;
+    this[ITERATOR_SYMBOL] = () => new Iterator(next);
   }
 
   find() {
-    let match = this[ITERATOR_SYMBOL]().next();
-    return match.done ? null : match.value;
+    if (!this._iterator) {
+      this._iterator = this[ITERATOR_SYMBOL]();
+    }
+
+    let match = this._iterator.next();
+
+    if (match.done) {
+      delete this._iterator;
+      return null;
+    }
+
+    return match.value;
   }
 }

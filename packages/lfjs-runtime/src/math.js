@@ -1,22 +1,36 @@
-import { isNumber } from 'lodash/fp';
+export {
+  isInteger,
+  gt,
+  lt,
+  gte,
+  lte,
+  add,
+  subtract,
+  multiply,
+  divide
+} from 'lodash';
 
-export function pos_QMARK_(n) {
+import { isNumber } from 'lodash';
+
+export { isNumber };
+
+export function isPos(n) {
   return isNumber(n) && n > 0;
 }
 
-export function neg_QMARK_(n) {
+export function isNeg(n) {
   return isNumber(n) && n < 0;
 }
 
-export function zero_QMARK_(n) {
+export function isZero(n) {
   return isNumber(n) && n === 0;
 }
 
-export function even_QMARK_(n) {
+export function isEven(n) {
   return isNumber(n) && n % 2 == 0;
 }
 
-export function odd_QMARK_(n) {
+export function isOdd(n) {
   return isNumber(n) && n % 2 !== 0;
 }
 
@@ -32,6 +46,8 @@ export function mod(a, b) {
   return (a % b + b) % b;
 }
 
-export function float_QMARK_(n) {
+export function isFloat(n) {
  return n === +n && n !== (n|0);
 }
+
+export function floor() {}

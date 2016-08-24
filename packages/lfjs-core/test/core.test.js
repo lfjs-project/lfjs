@@ -27,8 +27,8 @@ describe('lfjs-core', () => {
 
   describe('invocations', () => {
     test('simple invocation', '(+ 1 2) (- 3 0) (pos? 3)');
-    test('predicates', '(def a []) (array? a) (filter odd? a)');
-    test('floats', '(group-by floor [6.1 4.2 6.3])');
+    test('predicates', '(def a []) (vector? a) (filter odd? a)');
+    test('floats', '(partition-by floor [6.1 4.2 6.3])');
     test('println', '(println "hello")');
   });
 
@@ -57,10 +57,6 @@ describe('lfjs-core', () => {
 
   describe('exceptions', () => {
     test('throw', '(throw "Error!")');
-    test('try', '(try (map inc [1 2]))');
-    test('throw try catch', '(try (throw "Error!") (catch "yolo!"))');
-    test('try catch', '(defn error! [] (throw "Error!")) (try (error!) (catch "yolo!"))');
-    test('try catch finally', '(try (map inc [1 2]) (catch []) (finally (println "yolo!")))');
   });
 
   describe('class', () => {
@@ -70,12 +66,14 @@ describe('lfjs-core', () => {
 
   describe('predicates', () => {
     test('nil?', '(nil? nil)');
-    test('array?', '(array? [])');
+    test('vector?', '(vector? [])');
+    test('set?', '(set? #{})');
+    test('hash-map?', '(hash-map? {})');
     test('true?', '(true? true)');
     test('false?', '(false? false)');
     test('number?', '(number? 1)');
     test('string?', '(string? "abc")');
-    test('is empty?', '(empty? [])');
+    test('empty?', '(empty? [])');
     test('fn?', '(fn? inc)');
     test('integer?', '(integer? 1)');
     test('float?', '(float? 1.1)');
@@ -83,7 +81,9 @@ describe('lfjs-core', () => {
 });
 
 function test(name, source) {
-  let filename = kebabCase(name);
+  let filename = kebabCase(name
+    .replace('?', '-qmark')
+    .replace('!', '-bang'));
 
   if (arguments.length === 1) {
     source = readFileSync(path('actual', filename, 'lfjs'), 'utf-8');

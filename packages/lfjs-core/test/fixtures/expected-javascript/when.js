@@ -1,8 +1,8 @@
-import { gt } from "lodash/fp";
+import { gt as _GT_ } from "lfjs-runtime/math";
 
 const do_stuff = () => null;
 
-gt(2, 3) ? function () {
+_GT_(2, 3) ? function () {
   do_stuff();
   return do_stuff();
 }() : null;

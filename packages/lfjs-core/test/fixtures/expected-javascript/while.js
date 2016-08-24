@@ -1,4 +1,5 @@
-import { atom, dec, deref, pos_QMARK_, swap_BANG_ } from "lfjs-runtime";
+import { atom, deref, swap as swap_BANG_ } from "lfjs-runtime/atom";
+import { dec, isPos as pos_QMARK_ } from "lfjs-runtime/math";
 const a = atom(10);
 
 (function __loop() {

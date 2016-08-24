@@ -1,13 +1,18 @@
 {
+  "type": "Program",
   "body": [
     {
+      "type": "VariableDeclaration",
+      "kind": "const",
       "declarations": [
         {
+          "type": "VariableDeclarator",
           "id": {
-            "name": "a",
-            "type": "Identifier"
+            "type": "Identifier",
+            "name": "a"
           },
           "init": {
+            "type": "ArrayExpression",
             "elements": [
               {
                 "type": "StringLiteral",
@@ -28,16 +33,11 @@
               {
                 "type": "NullLiteral"
               }
-            ],
-            "type": "ArrayExpression"
-          },
-          "type": "VariableDeclarator"
+            ]
+          }
         }
-      ],
-      "kind": "const",
-      "type": "VariableDeclaration"
+      ]
     }
   ],
-  "directives": [],
-  "type": "Program"
+  "directives": []
 }

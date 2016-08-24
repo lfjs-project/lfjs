@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "integer_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isInteger"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/math"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "integer_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "NumericLiteral",
+            "value": 1
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import html, { component, render_static } from '../src/index';
+import html, { component, renderStatic } from '../src/index';
 
 describe('lfjs-html', function() {
   describe('tag', function() {
@@ -42,7 +42,7 @@ describe('lfjs-html', function() {
 
 function test(expected, source) {
   let element = html(source);
-  let markup = render_static(element);
+  let markup = renderStatic(element);
 
   it(expected, () => {
     assert.equal(markup, expected, 'markup shold match');

@@ -7,14 +7,18 @@
   "license": "MIT",
   "main": "dist/index.js",
   "jsnext:main": "src/index.js",
+  "browser": "dist/browser/index.js",
   "scripts": {
     "clean": "rm -rf dist coverage",
     "lint": "eslint src test",
     "pretest": "npm run lint",
-    "test": "mocha --compilers js:babel-register --recursive",
-    "test:watch": "npm test -- --watch",
-    "build": "babel src --out-dir dist",
-    "prepublish": "npm run build && npm test"
+    "test": "mocha --compilers js:babel-register",
+    "test:ci": "testem:ci",
+    "test:server": "testem",
+    "build": "npm run build:node && npm run build:browser",
+    "build:node": "babel src --out-dir dist",
+    "build:browser": "rollup -c",
+    "prepublish": "npm run clean && npm test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,12 +34,9 @@
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "eslint": "^3.2.2",
-    "mocha": "^3.0.2"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "mocha": "^3.0.2",
+    "rollup": "^0.34.10",
+    "testem": "^1.10.4"
   },
   "dependencies": {
     "lodash": "^4.15.0"

@@ -8,28 +8,37 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "floor"
+            "name": "partition_by"
           },
           "imported": {
             "type": "Identifier",
-            "name": "floor"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
-            "name": "groupBy"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "groupBy"
+            "name": "partitionBy"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime/transducers"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "floor"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "floor"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/math"
       }
     },
     {
@@ -38,7 +47,7 @@
         "type": "CallExpression",
         "callee": {
           "type": "Identifier",
-          "name": "groupBy"
+          "name": "partition_by"
         },
         "arguments": [
           {

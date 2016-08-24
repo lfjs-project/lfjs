@@ -31,9 +31,11 @@ function importDeclarationsFrom(imports) {
   if (!isEmpty(imports)) {
     return imports.map(([moduleName, imports]) => {
       return importDeclaration(
-        toArray(imports).sort().map(name => importSpecifier(
-          identifier(name),
-          identifier(name)
+        toArray(imports).sort()
+          .map(name => name.split(':'))
+          .map(([imported, local]) => importSpecifier(
+          identifier(local),
+          identifier(imported)
         )),
         stringLiteral(moduleName)
       );

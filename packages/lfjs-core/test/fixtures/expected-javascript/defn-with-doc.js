@@ -1,4 +1,4 @@
-import { map } from "lodash/fp";
-import { inc } from "lfjs-runtime";
+import { map } from "lfjs-runtime/transducers";
+import { inc } from "lfjs-runtime/math";
 
 const a = x => map(inc, x);

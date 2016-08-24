@@ -8,37 +8,28 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "lt"
+            "name": "inc"
           },
           "imported": {
             "type": "Identifier",
-            "name": "lt"
+            "name": "inc"
           }
-        }
-      ],
-      "source": {
-        "type": "StringLiteral",
-        "value": "lodash/fp"
-      }
-    },
-    {
-      "type": "ImportDeclaration",
-      "specifiers": [
+        },
         {
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "inc"
+            "name": "_LT_"
           },
           "imported": {
             "type": "Identifier",
-            "name": "inc"
+            "name": "lt"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime"
+        "value": "lfjs-runtime/math"
       }
     },
     {
@@ -96,7 +87,7 @@
                               "type": "CallExpression",
                               "callee": {
                                 "type": "Identifier",
-                                "name": "lt"
+                                "name": "_LT_"
                               },
                               "arguments": [
                                 {

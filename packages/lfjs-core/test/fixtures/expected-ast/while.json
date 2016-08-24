@@ -19,17 +19,6 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "dec"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "dec"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
             "name": "deref"
           },
           "imported": {
@@ -41,28 +30,48 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "pos_QMARK_"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "pos_QMARK_"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
             "name": "swap_BANG_"
           },
           "imported": {
             "type": "Identifier",
-            "name": "swap_BANG_"
+            "name": "swap"
           }
         }
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime"
+        "value": "lfjs-runtime/atom"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "dec"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "dec"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "pos_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isPos"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/math"
       }
     },
     {

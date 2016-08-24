@@ -4,7 +4,6 @@ import {
   expressionStatement,
   isClassDeclaration,
   isThrowStatement,
-  isTryStatement,
   isVariableDeclaration,
   returnStatement
 } from 'babel-types';
@@ -12,8 +11,7 @@ import {
 function needsWrappedStatement(body) {
   return isVariableDeclaration(body) ||
     isClassDeclaration(body) ||
-    isThrowStatement(body) ||
-    isTryStatement(body);
+    isThrowStatement(body);
 }
 
 function wrappedExpressionStatement(body) {
@@ -30,8 +28,6 @@ function wrappedReturnStatement(body) {
       body,
       returnStatement(body.declarations[0].id)
     ];
-  } else if (isTryStatement(body)) {
-    return body;
   } else {
     return returnStatement(body);
   }

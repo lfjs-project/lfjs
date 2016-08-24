@@ -1,4 +1,4 @@
-import { get } from "lodash/fp";
+import { get } from "lfjs-runtime/hash-map";
 get("a", {
   "a": 1
 });
