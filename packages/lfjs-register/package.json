@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lfjs/lfjs.git"
+    "url": "git+https://github.com/lfjs-project/lfjs.git"
   },
   "keywords": [
     "es6",
     "modules"
   ],
   "bugs": {
-    "url": "https://github.com/lfjs/lfjs/issues"
+    "url": "https://github.com/lfjs-project/lfjs/issues"
   },
   "dependencies": {
     "home-or-tmp": "^1.0.0",
