@@ -10,7 +10,9 @@
     "test": "lerna run test",
     "lint": "lerna run lint",
     "test:browser": "testem ci",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "bootstrap": "lerna bootstrap",
+    "test:ci": "npm install && npm run bootstrap && npm test"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
