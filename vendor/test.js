@@ -11,3 +11,6 @@ define('chai', ['exports'], function (exports) {
 });
 
 requirejs('lfjs-fetch/test');
+requirejs('lfjs-html/test');
+requirejs('lfjs-parser/test');
+requirejs('lfjs-runtime/test');

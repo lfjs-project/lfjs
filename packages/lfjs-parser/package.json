@@ -13,11 +13,10 @@
     "lint": "eslint src test",
     "pretest": "npm run lint",
     "test": "mocha --compilers js:babel-register",
-    "test:ci": "testem:ci",
-    "test:server": "testem",
     "build": "npm run build:node && npm run build:browser",
     "build:node": "babel src --out-dir dist",
-    "build:browser": "rollup -c",
+    "build:browser": "PACKAGE_NAME=lfjs-parser NODE_ENV=production rollup -c ../../rollup.config.js",
+    "build:browser:test": "PACKAGE_NAME=lfjs-parser NODE_ENV=test rollup -c ../../rollup.config.js",
     "prepublish": "npm run clean && npm test && npm run build"
   },
   "repository": {
@@ -35,8 +34,7 @@
     "babel-cli": "^6.11.4",
     "eslint": "^3.2.2",
     "mocha": "^3.0.2",
-    "rollup": "^0.34.10",
-    "testem": "^1.10.4"
+    "rollup": "^0.34.10"
   },
   "dependencies": {
     "lodash": "^4.15.0"

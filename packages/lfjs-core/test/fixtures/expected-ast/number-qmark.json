@@ -18,7 +18,7 @@
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lfjs-runtime/math"
+        "value": "lfjs-runtime/lang"
       }
     },
     {

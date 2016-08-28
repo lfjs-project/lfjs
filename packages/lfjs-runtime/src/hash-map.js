@@ -16,9 +16,6 @@ import {
   zip
 } from 'lodash';
 
-const NOT_SET = 'NOT_SET';
-const EMPTY_HASH_MAP = Object.create(null);
-
 export {
   keys,
   values as vals
@@ -27,15 +24,23 @@ export {
 import { assert, typeOf } from './lang';
 import { isEven } from './math';
 
+export function hashMap() {
+  return Object.create(null);
+}
+
 export function merge(m, ...args) {
   switch (arguments.length) {
   case 0:
-    return EMPTY_HASH_MAP;
+    return null;
   case 1:
     return m;
   default:
-    assert(isPlainObject(m), `merge: first argument must be a hash-map, was ${typeOf(m)}.`);
-    return Object.assign(Object.create(null), m, ...args);
+    if (Array.isArray(m)) {
+      return m.concat(...args);
+    } else if (isPlainObject(m)) {
+      return Object.assign(Object.create(null), m, ...args);
+    }
+    assert(false, `merge: first argument must be a vector or a hash-map, was ${typeOf(m)}.`);
   }
 }
 
@@ -47,11 +52,11 @@ export function zipmap(keys, vals) {
   assert(Array.isArray(vals), `zipmap: second argument must be a vector, was ${typeOf(vals)}.`);
   assert(keys.length === vals.length, `zipmap: first and second arguments must be vectors of the same length.`);
 
-  return merge(fromPairs(zip(keys, vals)));
+  return fromPairs(zip(keys, vals));
 }
 
 export function get(m, key, notFound = null) {
-  assert(isIndex(key), `get: second argument must be a keyword or an int, was ${typeOf(key)}.`);
+  assert(isIndex(key), `get: second argument must be a keyword a string or an int, was ${typeOf(key)}.`);
 
   return _get(m, key, notFound);
 }
@@ -74,6 +79,8 @@ export function assoc(m, ...pairs) {
 }
 
 export function dissoc(m, ...keys) {
+  assert(isPlainObject(m), `dissoc: first argument must be a hash-map, was ${typeOf(m)}.`);
+
   return fromPairs(
     difference(Object.keys(m), keys)
     .map(key => [key, m[key]])
@@ -95,13 +102,11 @@ export function updateIn(m, path, fn, ...args) {
   assert(Array.isArray(path), `updateIn: second argument must be a vector, was ${typeOf(path)}.`);
   assert(isFunction(fn), `updateIn: third argument must be a function, was ${typeOf(fn)}.`);
 
-  let updatedValue = updateInDeepMap(
+  return _updateIn(
     m,
     path[Symbol.iterator](),
     isEmpty(args) ? fn : curry(fn, args.length + 1)(...args)
   );
-
-  return updatedValue === NOT_SET ? null : updatedValue;
 }
 
 export function find(m, key) {
@@ -116,26 +121,24 @@ function isIndex(key) {
   return isString(key) || isInteger(key);
 }
 
-function updateInDeepMap(existing, keyPathIter, updater) {
-  let isNotSet = existing === NOT_SET;
+function _updateIn(existingValue, keyPathIter, fn) {
   let step = keyPathIter.next();
   if (step.done) {
-    let existingValue = isNotSet ? null : existing;
-    let newValue = updater(existingValue);
-    return newValue === existingValue ? existing : newValue;
+    let newValue = fn(existingValue);
+
+    if (newValue === existingValue) {
+      return existingValue;
+    } else {
+      return  newValue;
+    }
   }
   let key = step.value;
-  let nextExisting = isNotSet ? NOT_SET : _get(existing, key, NOT_SET);
-  let nextUpdated = updateInDeepMap(
-    nextExisting,
-    keyPathIter,
-    updater
-  );
+  let nextExistingValue = _get(existingValue, key, null);
+  let nextUpdatedValue = _updateIn(nextExistingValue, keyPathIter, fn);
 
-  if (nextUpdated === nextExisting) {
-    return existing;
+  if (nextUpdatedValue === nextExistingValue) {
+    return existingValue;
   } else {
-    return assoc(isNotSet ? merge() : existing,
-      key, nextUpdated);
+    return assoc(existingValue || hashMap(), key, nextUpdatedValue);
   }
 }

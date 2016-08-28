@@ -6,12 +6,10 @@
   "license": "MIT",
   "scripts": {
     "clean": "lerna clean",
+    "pretest": "lerna run build:node",
     "test": "lerna run test",
     "lint": "lerna run lint",
-    "test:cli": "lerna run test --scope lfjs-cli",
-    "test:parser": "lerna run test --scope lfjs-parser",
-    "test:core": "lerna run test --scope lfjs-core",
-    "test:runtime": "lerna run test --scope lfjs-runtime",
+    "test:browser": "testem ci",
     "build": "lerna run build"
   },
   "devDependencies": {
@@ -26,12 +24,14 @@
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
     "eslint": "^3.2.2",
+    "fs-extra": "^0.30.0",
     "lerna": "2.0.0-beta.26",
     "loader.js": "^4.0.11",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^3.3.1",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-uglify": "^1.0.1"
+    "rollup-plugin-uglify": "^1.0.1",
+    "testem": "^1.10.4"
   },
   "repository": {
     "type": "git",

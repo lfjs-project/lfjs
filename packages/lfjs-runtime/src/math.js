@@ -12,8 +12,6 @@ export {
 
 import { isNumber } from 'lodash';
 
-export { isNumber };
-
 export function isPos(n) {
   return isNumber(n) && n > 0;
 }

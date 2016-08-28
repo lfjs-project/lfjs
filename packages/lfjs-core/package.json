@@ -12,8 +12,10 @@
     "lint": "eslint src test/*.js",
     "pretest": "npm run lint",
     "test": "mocha --compilers js:babel-register",
-    "test:watch": "npm test -- --watch",
+    "test:ci": "npm test",
+    "test:server": "npm test -- --watch",
     "build": "babel src --out-dir dist",
+    "build:browser:test": "",
     "prepublish": "npm run clean && npm test && npm run build"
   },
   "repository": {

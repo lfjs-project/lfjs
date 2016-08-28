@@ -4,6 +4,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
 
+const { PACKAGE_NAME, NODE_ENV } = process.env;
+
 const config = {
   format: 'amd'
 };
@@ -18,9 +20,8 @@ const defaultPlugins = [
   babel(babelrc())
 ];
 
-export default function(moduleId, env = {}) {
-  let { NODE_ENV } = env,
-      dest = 'dist/browser/index.js',
+function build(moduleId) {
+  let dest = 'dist/browser/index.js',
       entry = 'src/index.js',
       plugins = [].concat(defaultPlugins);
 
@@ -41,3 +42,5 @@ export default function(moduleId, env = {}) {
     plugins
   }, config);
 }
+
+export default build(PACKAGE_NAME);

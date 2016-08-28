@@ -23,18 +23,20 @@ import {
 import { key, val } from './lang';
 
 const MAPPING = {
-  'add':      '_PLUS_',
-  'divide':   '_SLASH_',
-  'gt':       '_GT_',
-  'gte':      '_GT__EQ_',
-  'has':      'contains_QMARK_',
-  'isEqual':  '_EQ_',
-  'lt':       '_LT_',
-  'lte':      '_LT__EQ_',
-  'multiply': '_STAR_',
-  'reset':    'reset_BANG_',
-  'subtract': '_',
-  'swap':     'swap_BANG_'
+  'add':           '_PLUS_',
+  'divide':        '_SLASH_',
+  'gt':            '_GT_',
+  'gte':           '_GT__EQ_',
+  'has':           'contains_QMARK_',
+  'isEqual':       '_EQ_',
+  'lt':            '_LT_',
+  'lte':           '_LT__EQ_',
+  'multiply':      '_STAR_',
+  'reset':         'reset_BANG_',
+  'subtract':      '_',
+  'swap':          'swap_BANG_',
+  'compareAndSet': 'compare_and_set_BANG_',
+  'setValidator':  'set_validator_BANG_'
 };
 
 const PREDICATE_REGEXP = /^is_/;

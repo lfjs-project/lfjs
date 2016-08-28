@@ -4,22 +4,24 @@ export {
   isEqual,
   isFunction as isFn,
   isSet,
-  isString
+  isString,
+  isNumber
 } from 'lodash';
 
 import {
-  isPlainObject,
   isEmpty,
-  isNil
+  isNil,
+  isPlainObject,
+  last,
+  toArray
 } from 'lodash';
 
-export { isNil };
+export {
+  isNil,
+  isPlainObject as isHashMap
+};
 
-export const isHashMap = isPlainObject;
-
-export const and = (a, b) => a || b;
-export const or = (a, b) => a && b;
-export const not = (v) => !v;
+import { isColl } from './coll';
 
 export function isBlank(v) {
   switch (typeof v) {
@@ -63,6 +65,8 @@ export function typeOf(v) {
   case 'string':
   case 'number':
   case 'function':
+  case 'boolean':
+  case 'symbol':
     return type;
   default:
     if (isNil(v)) {
@@ -73,4 +77,17 @@ export function typeOf(v) {
       return 'hash-map'
     }
   }
+}
+
+export function println(...args) {
+  console.log(...args);
+  return args[0];
+}
+
+export function apply(fn, ...args) {
+  let args2 = last(args);
+
+  assert(isColl(args2), `apply: first argument must be a collection, was ${typeOf(args2)}.`);
+
+  return fn(...args.concat(toArray(args2)));
 }

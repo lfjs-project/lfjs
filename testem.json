@@ -1,0 +1,23 @@
+{
+  "framework": "mocha",
+  "src_files": [
+    "packages/*/src/**/*.js",
+    "packages/*/test/*.test.js"
+  ],
+  "serve_files": [
+    "node_modules/chai/chai.js",
+    "node_modules/loader.js/lib/loader/loader.js",
+    "packages/*/dist/test.js",
+    "vendor/test.js"
+  ],
+  "before_tests": "./node_modules/.bin/lerna run build:browser:test",
+  "launch_in_dev": [
+    "PhantomJS",
+    "Chrome",
+    "Firefox",
+    "Safari"
+  ],
+  "launch_in_ci": [
+    "Chrome"
+  ]
+}

@@ -1,9 +1,14 @@
 export {
   compose as comp,
+  constant as constantly,
   curry,
+  identity,
   memoize,
-  once,
+  negate as complement,
+  over as juxt,
   partial
 } from 'lodash';
 
-export const juxt = (...fns) => (v) => fns.map(fn => fn.call(null, v));
+export {
+  completing
+} from 'lfjs-transducers';

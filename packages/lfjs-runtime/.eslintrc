@@ -11,6 +11,7 @@
     "console": true,
     "setTimeout": true,
     "Symbol": true,
-    "Set": true
+    "Set": true,
+    "Map": true
   }
 }

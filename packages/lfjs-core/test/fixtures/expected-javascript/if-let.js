@@ -1,4 +1,4 @@
-import { seq } from "lfjs-runtime/vector";
+import { seq } from "lfjs-runtime/coll";
 import { filter, reduce } from "lfjs-runtime/transducers";
 import { add as _PLUS_, isEven as even_QMARK_ } from "lfjs-runtime/math";
 

@@ -1,24 +1,36 @@
 import {
   isEmpty,
-  pull
+  toArray,
+  isSet,
+  clone
 } from 'lodash';
 
-const EMPTY_SET = new Set();
+import { assert, typeOf } from './lang';
 
 export function disj(s, ...args) {
-  return _set(pull(Array.from(s), args));
+  assert(isSet(s), `disj: first argument must be a set, was ${typeOf(s)}.`);
+
+  s = clone(s);
+
+  args.map(toArray).forEach(a => s.delete(a));
+
+  return s;
 }
 
 export function join(s, ...args) {
-  return _set(Array.from(s).concat(
-    ...args.map(s => Array.from(s))
-  ));
+  assert(isSet(s), `join: first argument must be a set, was ${typeOf(s)}.`);
+
+  s = clone(s);
+
+  args.map(toArray).forEach(a => s.add(a));
+
+  return s;
 }
 
-export function _set(entries) {
-  if (isEmpty(entries)) {
-    return EMPTY_SET;
+export function set(seq) {
+  if (isEmpty(seq)) {
+    return new Set();
   } else {
-    return new Set(entries);
+    return new Set(toArray(seq));
   }
 }
