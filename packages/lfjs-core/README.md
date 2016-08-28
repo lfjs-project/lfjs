@@ -41,7 +41,7 @@ lfjs.transformFromAst([{
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
-            "name": "add"
+            "name": "_PLUS_"
           },
           "imported": {
             "type": "Identifier",
@@ -51,7 +51,7 @@ lfjs.transformFromAst([{
       ],
       "source": {
         "type": "StringLiteral",
-        "value": "lodash/fp"
+        "value": "lfjs-runtime"
       }
     },
     {
@@ -60,7 +60,7 @@ lfjs.transformFromAst([{
         "type": "CallExpression",
         "callee": {
           "type": "Identifier",
-          "name": "add"
+          "name": "_PLUS_"
         },
         "arguments": [
           {
