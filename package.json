@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "clean": "lerna clean",
-    "pretest": "lerna run build:node",
     "test": "lerna run test",
     "lint": "lerna run lint",
     "test:browser": "testem ci",

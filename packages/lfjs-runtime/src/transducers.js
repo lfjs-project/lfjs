@@ -10,14 +10,12 @@ export {
   map,
   mapcat,
   partition,
+  partitionAll,
   partitionBy,
+  reduce,
   remove,
   take,
   takeNth,
   takeWhile,
   transduce
 } from 'lfjs-transducers';
-
-export function reduce() {}
-
-export function partitionAll() {}

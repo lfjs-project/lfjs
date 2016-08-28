@@ -16,7 +16,32 @@ const defaultPlugins = [
     main: true,
     skip: ['chai']
   }),
-  commonjs(),
+  commonjs({
+    namedExports: {
+      'lfjs-transducers': [
+        'completing',
+        'cat',
+        'dedupe',
+        'drop',
+        'dropWhile',
+        'filter',
+        'interpose',
+        'into',
+        'keep',
+        'map',
+        'mapcat',
+        'partition',
+        'partitionAll',
+        'partitionBy',
+        'reduce',
+        'remove',
+        'take',
+        'takeNth',
+        'takeWhile',
+        'transduce'
+      ]
+    }
+  }),
   babel(babelrc())
 ];
 
