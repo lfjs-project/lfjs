@@ -17,6 +17,10 @@ describe('lfjs-runtime', () => {
       assert.ok(registry('_GT_'), 'gt');
       assert.equal(registry('_GT_').imported, 'gt');
       assert.equal(registry('_GT_').module, 'lfjs-runtime/math');
+
+      let i = 0;
+      registry.forEach(() => i++);
+      assert.ok(i > 0, 'should have modules');
     });
   });
 

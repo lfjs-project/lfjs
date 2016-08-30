@@ -33,6 +33,26 @@
       }
     },
     {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "println"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "println"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/lang"
+      }
+    },
+    {
       "type": "ExpressionStatement",
       "expression": {
         "type": "CallExpression",
@@ -114,16 +134,8 @@
                                       "expression": {
                                         "type": "CallExpression",
                                         "callee": {
-                                          "type": "MemberExpression",
-                                          "object": {
-                                            "type": "Identifier",
-                                            "name": "console"
-                                          },
-                                          "property": {
-                                            "type": "Identifier",
-                                            "name": "log"
-                                          },
-                                          "computed": false
+                                          "type": "Identifier",
+                                          "name": "println"
                                         },
                                         "arguments": [
                                           {

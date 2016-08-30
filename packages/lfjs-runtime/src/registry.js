@@ -39,6 +39,21 @@ const MAPPING = {
   'setValidator':  'set_validator_BANG_'
 };
 
+const SPECIAL_CHARS_MAP = {
+  '_BANG_':    '!',
+  '_PERCENT_': '%',
+  '_STAR_':    '*',
+  '_PLUS_':    '+',
+  '_SLASH_':   '/',
+  '_LT_':      '<',
+  '_EQ_':      '=',
+  '_GT_':      '>',
+  '_QMARK_':   '?',
+  '_':         '-'
+};
+
+const SPECIAL_CHARS = Object.keys(SPECIAL_CHARS_MAP);
+
 const PREDICATE_REGEXP = /^is_/;
 const PRIVATE_REGEXP = /^_/;
 
@@ -56,6 +71,16 @@ const aliasName = memoize((key) => {
   return key;
 });
 
+function normalizedName(str) {
+  return SPECIAL_CHARS
+    .reduce((str, key) => {
+      return str.replace(
+        new RegExp(key, 'g'),
+        SPECIAL_CHARS_MAP[key]
+      );
+    }, str);
+}
+
 function isPublicKey([key, { imported }]) {
   return MAPPING[imported] || !key.match(PRIVATE_REGEXP);
 }
@@ -64,17 +89,25 @@ function needsAlias(key) {
   return aliasName(key) !== key;
 }
 
+function aliasEntry([key, entry]) {
+  key = aliasName(key);
+  entry.name = normalizedName(key);
+  return [key, entry];
+}
+
 function annotate(name, module, publicOnly = true) {
   let pairs = entries(module)
     .filter(compose(isFunction, val))
-    .map(compose((id => [id, {
+    .map(([id, fn]) => [id, {
       imported: id,
-      module: `lfjs-runtime/${name}`
-    }]), key));
+      module: `lfjs-runtime/${name}`,
+      arity: fn.length,
+      name: normalizedName(id)
+    }]);
 
   let aliases = pairs
     .filter(compose(needsAlias, key))
-    .map(([key, entry]) => [aliasName(key), entry]);
+    .map(aliasEntry);
 
   pairs = pairs.concat(aliases);
 
@@ -92,8 +125,10 @@ const factory = once(function() {
     runtime,
     {
       component: {
+        name: 'component',
         imported: 'component',
-        module: 'lfjs-html'
+        module: 'lfjs-html',
+        arity: 1
       }
     },
     annotate('-internal', internal, false),
@@ -114,3 +149,9 @@ export default function registry(id) {
   factory();
   return runtime[id];
 }
+
+registry.forEach = (callback) => {
+  factory();
+  entries(runtime)
+    .forEach(([name, meta]) => callback(name, meta));
+};

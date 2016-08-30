@@ -4,10 +4,11 @@ import {
   writeFileSync,
   existsSync
 } from 'fs';
-import { kebabCase } from 'lodash';
+import { kebabCase, times, uniq } from 'lodash';
 import { assert } from 'chai';
 
 import { transform } from '../src/index';
+import { registry } from 'lfjs-runtime';
 
 describe('lfjs-core', () => {
   describe('declarations', () => {
@@ -77,6 +78,25 @@ describe('lfjs-core', () => {
     test('fn?', '(fn? inc)');
     test('integer?', '(integer? 1)');
     test('float?', '(float? 1.1)');
+  });
+
+  describe('runtime', () => {
+    let ARGS = Array.from('xyzij');
+    let statements = [];
+    let vars = new Set();
+    function varByArity(i) {
+      let x = ARGS[i];
+      vars.add(x);
+      return x;
+    }
+    registry.forEach((name, meta) => {
+      if (meta.name) {
+        statements.push(`(${[meta.name, ...times(meta.arity, varByArity)].join(' ')})`);
+      }
+    });
+    let args = Array.from(vars).map(x => `(def ${x} nil)`);
+    statements = [...args, ...uniq(statements)].join("\n");
+    test('runtime', statements);
   });
 });
 

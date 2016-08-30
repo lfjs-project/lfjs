@@ -1,0 +1,4198 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_catch"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_catch"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_finally"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_finally"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "promise"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_promise"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "then"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_then"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_throw"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "_throw"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/-internal"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "add_watch"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "addWatch"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "atom"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "atom"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "compare_and_set_BANG_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "compareAndSet"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "deref"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "deref"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "get_validator"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "getValidator"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "atom_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isAtom"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "remove_watch"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "removeWatch"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "reset_BANG_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "reset"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "set_validator_BANG_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "setValidator"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "swap_BANG_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "swap"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/atom"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "clone"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "clone"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "compact"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "compact"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "conj"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "conj"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "cons"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "cons"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "count"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "count"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "empty"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "empty"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "contains_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "has"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "coll_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isColl"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "empty_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isEmpty"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "not_empty"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "notEmpty"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "range"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "range"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "seq"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "seq"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "sort_by"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "sortBy"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/coll"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "comp"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "comp"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "complement"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "complement"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "completing"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "completing"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "constantly"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "constantly"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "curry"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "curry"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "identity"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "identity"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "juxt"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "juxt"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "memoize"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "memoize"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "partial"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "partial"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/fn"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "assoc"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "assoc"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "assoc_in"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "assocIn"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "dissoc"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "dissoc"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "find"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "find"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "get"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "get"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "get_in"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "getIn"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "hash_map"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "hashMap"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "keys"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "keys"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "merge"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "merge"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "merge_with"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "mergeWith"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "update"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "update"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "update_in"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "updateIn"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "vals"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "vals"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "zip"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "zip"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "zipmap"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "zipmap"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/hash-map"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "apply"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "apply"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "assert"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "assert"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "blank_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isBlank"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "date_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isDate"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_EQ_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isEqual"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "false_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isFalse"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "fn_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isFn"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "hash_map_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isHashMap"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "nil_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isNil"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "number_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isNumber"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "present_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isPresent"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "set_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isSet"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "string_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isString"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "true_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isTrue"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "vector_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isVector"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "key"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "key"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "println"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "println"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "type_of"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "typeOf"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "val"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "val"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/lang"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_PLUS_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "add"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "dec"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "dec"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_SLASH_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "divide"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "floor"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "floor"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_GT_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "gt"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_GT__EQ_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "gte"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "inc"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "inc"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "even_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isEven"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "float_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isFloat"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "integer_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isInteger"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "neg_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isNeg"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "odd_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isOdd"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "pos_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isPos"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "zero_QMARK_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "isZero"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_LT_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "lt"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_LT__EQ_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "lte"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "mod"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "mod"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_STAR_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "multiply"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "_"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "subtract"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/math"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "disj"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "disj"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "join"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "join"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "set"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "set"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/set"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "camel_case"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "camelCase"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "capitalize"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "capitalize"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "escape"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "escape"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "kebab_case"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "kebabCase"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "lower_case"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "lowerCase"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "pad"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "pad"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "padl"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "padl"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "padr"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "padr"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "snake_case"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "snakeCase"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "str"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "str"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "to_lower"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "toLower"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "to_upper"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "toUpper"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "trim"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "trim"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "triml"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "triml"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "trimr"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "trimr"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "unescape"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "unescape"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "upper_case"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "upperCase"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/string"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "cat"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "cat"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "dedupe"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "dedupe"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "drop"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "drop"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "drop_while"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "dropWhile"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "filter"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "filter"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "interpose"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "interpose"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "into"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "into"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "keep"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "keep"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "map"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "map"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "mapcat"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "mapcat"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "partition"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "partition"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "partition_all"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "partitionAll"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "partition_by"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "partitionBy"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "reduce"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "reduce"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "remove"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "remove"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "take"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "take"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "take_nth"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "takeNth"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "take_while"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "takeWhile"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "transduce"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "transduce"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/transducers"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "first"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "first"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "head"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "head"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "last"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "last"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "nth"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "nth"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "pop"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "pop"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "rest"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "rest"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "reverse"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "reverse"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "subvec"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "subvec"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "tail"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "tail"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "vec"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "vec"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "vector"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "vector"
+          }
+        }
+      ],
+      "source": {
+        "type": "StringLiteral",
+        "value": "lfjs-runtime/vector"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "x"
+          },
+          "init": {
+            "type": "NullLiteral"
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "y"
+          },
+          "init": {
+            "type": "NullLiteral"
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "z"
+          },
+          "init": {
+            "type": "NullLiteral"
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "i"
+          },
+          "init": {
+            "type": "NullLiteral"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_throw"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "promise"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "then"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_catch"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_finally"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "atom"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "atom_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "deref"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "reset_BANG_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "swap_BANG_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "compare_and_set_BANG_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "add_watch"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "remove_watch"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "set_validator_BANG_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "get_validator"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "clone"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "contains_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "range"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "count"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "sort_by"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "empty_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "coll_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "seq"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "empty"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "not_empty"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "conj"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "cons"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "compact"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "comp"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "constantly"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "curry"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "identity"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "memoize"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "complement"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "juxt"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "partial"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "completing"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "keys"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "vals"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "zip"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "hash_map"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "merge"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "merge_with"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "zipmap"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "get"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "get_in"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "assoc"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "dissoc"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "update"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "assoc_in"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "update_in"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "find"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "vector_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "date_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_EQ_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "fn_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "set_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "string_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "number_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "nil_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "hash_map_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "blank_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "present_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "val"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "key"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "assert"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "true_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "false_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "type_of"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "println"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "apply"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "integer_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_GT_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_LT_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_GT__EQ_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_LT__EQ_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_PLUS_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_STAR_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "_SLASH_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "pos_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "neg_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "zero_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "even_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "odd_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "dec"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "inc"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "mod"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "float_QMARK_"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "floor"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "disj"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "join"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "set"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "camel_case"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "capitalize"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "escape"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "kebab_case"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "lower_case"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "pad"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "padr"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "padl"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "snake_case"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "to_lower"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "to_upper"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "trim"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "trimr"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "triml"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "unescape"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "upper_case"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "str"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "cat"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "dedupe"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "drop"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "drop_while"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "filter"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "interpose"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "into"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "keep"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "map"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "mapcat"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "partition"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "partition_all"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "partition_by"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "reduce"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "remove"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "take"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "take_nth"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "take_while"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "transduce"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          },
+          {
+            "type": "Identifier",
+            "name": "i"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "head"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "first"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "tail"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "rest"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "vector"
+        },
+        "arguments": []
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "subvec"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          },
+          {
+            "type": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "pop"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "last"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "nth"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          },
+          {
+            "type": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "reverse"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "vec"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    }
+  ],
+  "directives": []
+}

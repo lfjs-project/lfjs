@@ -1,27 +1,20 @@
 export {
   camelCase,
   capitalize,
-  endsWith,
   escape,
   kebabCase,
   lowerCase,
-  lowerFirst,
   pad,
-  padEnd,
-  padStart,
-  repeat,
-  replace,
+  padEnd as padr,
+  padStart as padl,
   snakeCase,
-  startsWith,
   toLower,
   toUpper,
   trim,
-  trimEnd,
-  trimStart,
-  truncate,
+  trimEnd as trimr,
+  trimStart as triml,
   unescape,
-  upperCase,
-  upperFirst
+  upperCase
 } from 'lodash';
 
 export const str = (...args) => args.join('');

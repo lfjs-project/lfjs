@@ -22,7 +22,6 @@ import defn from './macros/defn';
 import get from './macros/get';
 import ifLet from './macros/if-let';
 import ifNot from './macros/if-not';
-import println from './macros/println';
 import recur from './macros/recur';
 
 const macros = [];
@@ -37,7 +36,6 @@ registerMacro({ value: 'defn' }, defn);
 registerMacro({ value: 'defc' }, defc);
 registerMacro({ value: 'if_let' }, ifLet);
 registerMacro({ value: 'if_not' }, ifNot);
-registerMacro({ value: 'println' }, println);
 registerMacro({ value: 'recur' }, recur);
 registerMacro({ value: 'when' }, _when);
 registerMacro({ value: 'while' }, _while);

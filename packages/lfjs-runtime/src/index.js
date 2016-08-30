@@ -9,9 +9,7 @@ import * as string from './string';
 import * as transducers from './transducers';
 import * as vector from './vector';
 
-import registry from './registry';
-
-export { registry };
+export { default as registry } from './registry';
 
 export default Object.assign(
   Object.create(null),
